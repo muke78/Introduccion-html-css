@@ -1,0 +1,180 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    font-weight: lighter;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+}
+
+.contenedor-login {
+    height: 350px;
+    margin: 10%;
+}
+
+.cont {
+    filter: blur(70px);
+    animation: color 3s;
+    animation-iteration-count: infinite;
+    transform: scale(1.8, 1.8);
+    width: 50px;
+}
+
+@keyframes color {
+    7% {
+        background: #eb4d4b;
+    }
+
+    15% {
+        background: #f0932b;
+    }
+
+    25% {
+        background: #f9ca24;
+    }
+
+    35% {
+        background: #6ab04c;
+    }
+
+    50% {
+        background: #7ed6df;
+    }
+
+    65% {
+        background: #4834d4;
+    }
+
+    75% {
+        background: #686de0;
+    }
+
+    100% {
+        background: transparent;
+    }
+}
+
+.cont_2 {
+    filter: saturate(200%);
+    margin: -10px;
+}
+
+.autor {
+    color: #000;
+    line-height: 43px;
+    position: fixed;
+    right: 0;
+    margin: 0px;
+    background-color: #badc58;
+    width: 50px;
+    height: 100%;
+    text-align: center;
+}
+
+.grupo {
+    color: #fff;
+    line-height: 43px;
+    position: fixed;
+    right: 0;
+    margin: 50px;
+    background-color: #535c68;
+    width: 50px;
+    height: 100%;
+    text-align: center;
+    transition: width 1s, background 1s;
+}
+
+h2 {
+    color: #ffffff;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+}
+
+h4 {
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+.fuera {
+    display: grid;
+}
+
+.input {
+    text-decoration: none;
+    margin-bottom: 30px;
+    outline: none;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-align: center;
+    border-radius: 6px;
+    width: 350px;
+    height: 60px;
+    transition: 0.5s;
+}
+
+.input:hover {
+    border-left: solid 8px #ff3f34;
+    border-right: solid 8px #ff3f34;
+}
+
+.btn {
+    text-decoration: none;
+    border: solid 2px #ff3f34;
+    outline: none;
+    color: #fff;
+    width: 350px;
+    height: 50px;
+    font-size: 16px;
+    border-radius: 50px;
+    background: transparent;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    transition: ease-in-out 0.3s;
+}
+
+.btn:hover {
+    background-color: #ff3f34;
+}
+
+
+a {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    letter-spacing: 3px;
+}
+
+.pag-new {
+    position: relative;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    letter-spacing: 3px;
+}
+.pag-new::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: -10px;
+    left: 0%;
+    transform: translateX(50%);
+    background:#ff3f34;
+    transition: width 0.3s;
+}
+.pag-new:hover::after{
+    width: 20%;
+}

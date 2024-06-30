@@ -1,0 +1,37 @@
+* {
+    margin: 5px;
+    padding: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:#272626;
+}
+
+.titulo {
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 70px;
+    color: white;
+}
+
+.img {
+    text-align: center;
+    margin-top: 90px;
+    margin: 60px;
+}
+
+footer {
+    margin-top: 50px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+li{
+    color: white;
+}
+
+p{
+    color: white;
+}
+pre{
+    color:white;
+}

@@ -1,0 +1,22 @@
+[0511/172724.084:ERROR:main_dll_loader_win.cc(136)] Failed to load Chrome DLL from C:\Program Files (x86)\Hotleaf\Application\58.0.3029.81\chrome.dll: No se puede encontrar el módulo especificado. (0x7E)
+[0511/172732.126:ERROR:main_dll_loader_win.cc(136)] Failed to load Chrome DLL from C:\Program Files (x86)\Hotleaf\Application\58.0.3029.81\chrome.dll: No se puede encontrar el módulo especificado. (0x7E)
+[0511/172735.642:ERROR:main_dll_loader_win.cc(136)] Failed to load Chrome DLL from C:\Program Files (x86)\Hotleaf\Application\58.0.3029.81\chrome.dll: No se puede encontrar el módulo especificado. (0x7E)
+[0511/172741.999:ERROR:main_dll_loader_win.cc(136)] Failed to load Chrome DLL from C:\Program Files (x86)\Hotleaf\Application\58.0.3029.81\chrome.dll: No se puede encontrar el módulo especificado. (0x7E)
+[0511/172744.249:ERROR:main_dll_loader_win.cc(136)] Failed to load Chrome DLL from C:\Program Files (x86)\Hotleaf\Application\58.0.3029.81\chrome.dll: No se puede encontrar el módulo especificado. (0x7E)
+[0511/173233.406:ERROR:main_dll_loader_win.cc(136)] Failed to load Chrome DLL from C:\Program Files (x86)\Hotleaf\Application\58.0.3029.81\chrome.dll: No se puede encontrar el módulo especificado. (0x7E)
+[0511/173237.205:ERROR:main_dll_loader_win.cc(136)] Failed to load Chrome DLL from C:\Program Files (x86)\Hotleaf\Application\58.0.3029.81\chrome.dll: No se puede encontrar el módulo especificado. (0x7E)
+[0607/004526.139:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0607/004526.186:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0607/004526.186:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0607/004526.186:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0607/004526.186:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0607/004526.186:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0607/004526.186:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0720/091218.632:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0720/091218.678:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0720/091218.678:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0720/091218.678:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0720/091218.678:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0720/091218.678:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0720/091218.678:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[1124/072401.291:ERROR:directory_reader_win.cc(43)] FindFirstFile: El sistema no puede encontrar la ruta especificada. (0x3)

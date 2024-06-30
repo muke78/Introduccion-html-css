@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+#header {
+    padding: 2rem;
+    width: 100%;
+    background-color: #575B55;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#header #logo {
+    color: white;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+#header #logo span {
+    color: #F2442B;
+    text-transform: uppercase;
+}
+
+#header nav {
+    color: 000;
+}
+
+#header nav a {
+    font: 1.4rem;
+    text-decoration: none;
+    padding: 0.8rem;
+    text-align: center;
+    color: white;
+    transition: 0.3s;
+    transition-property: border;
+    border-radius: 2rem;
+}
+
+#header nav a:hover {
+    opacity: 1;
+    background: rgba(204, 83, 65, 0.7);
+}
+
+#conte {
+    padding: 2rem;
+    width: 100%;
+    background: #F2442B;
+    height: auto;
+    text-align: center;
+}
+
+#conte #titu {
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 3rem
+}
+
+#conte .img {
+    display: inline-block;
+    text-align: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+#conte .img:hover{
+    transform: translateY(-12px);
+}
+
+#conte, .img h2 {
+    color: white;
+}
+
+#middle {
+    background-image: url(../IMG/body-bg.jpg);
+}
+
+#middle {
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+#middle img {
+    padding: 2rem;
+    width: 500px;
+    height: 500px;
+}
+
+#media {
+    background: #595959;
+    padding: 2rem;
+    text-align: center;
+}
+
+#media .clip {
+    width: 500px;
+    display: inline-block;
+}
+
+#media, .clip h3 {
+    color: white;
+    padding: 1.5rem;
+    text-transform: uppercase;
+}
+
+video {
+    width: 400px;
+}
+
+footer {
+    background: #252E33;
+    text-align: center;
+}
+
+.sec {
+    padding: 2rem;
+    display: inline-table;
+    width: 500px;
+}
+
+.sec h2 {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.sec li {
+    list-style: none;
+    margin-bottom: 0.5rem;
+}
+
+.sec li a {
+    font-size: 1.2rem;
+    color: #19536F;
+    text-decoration: none;
+}
+
+.sec img {
+    padding: 0.5rem;
+    width: 5rem;
+    transition: 0.3s;
+}
+
+.sec img:hover{
+    transform: translateY(-12px);
+}

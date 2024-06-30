@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+*{
+  margin:0;
+  padding:0;
+  text-decoration: none;
+  list-style: none;
+  -webkit-box-sizing:border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+body{
+  background: #111;
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+  font-family:'Open Sans';
+}
+.contenedor{
+  padding: 60px 0px;
+  width:90%;
+  max-width: 1000px;
+  margin:auto;
+  overflow: hidden;
+}
+.contenedor.sobre-nosotros{
+  background:#111;
+}
+
+.titulo{
+color: #642a73;
+font-size: 30px;
+text-align: center;
+margin-bottom: 60px;
+}
+header{
+  width:100%;
+  height: 600px;
+  background:#00C9FF;
+  background: -webkit-linear-gradient(to right, #f80759, #bc4e9c);
+  background: linear-gradient(to right, hsla(340, 95%, 50%, 0.641), hsla(317, 45%, 52%, 0.664)), url(../img/Portada.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+p{
+  color: white;
+  font-size:18px;
+}
+
+span{
+  color: white;
+}
+
+h3{
+  color: white;
+  font-size: 30px;
+}
+
+h1{
+  font-size: 70px;
+  color: white;
+}
+
+.wave{
+	position:absolute;
+	bottom:0;
+	width:100%;
+}
+.btn-inicio{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 15px;
+  align-items: center;
+  color: #fff;
+  letter-spacing: 5px;
+  font-size: 24px;
+  display:inline-block;
+  height: 60px;
+  width: 110px;
+  background: #FB9100;
+  font-family: 'Open Sans';
+  text-decoration: none;
+  overflow: hidden;
+  transition: 0.2s;
+  border-radius:3px;
+}
+
+.btn-inicio:hover{
+  background: #FEC14F ;
+  box-shadow: 0 0 10px #FEC14F , 0 0 40px #FEC14F , 0 0 80px #FEC14F ;
+  transition: .6s;
+}
+footer{
+    background: #414141;
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+.contenedor-footer{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+.content-foo{
+    text-align: center;
+}
+
+.content-foo h4{
+    color: #fff;
+    border-bottom: 3px solid #af20d3;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.content-foo p{
+    color: #ccc;
+}
+
+.titulo-final{
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: #9e9797;
+}
+
+
+
+body::-webkit-scrollbar {
+     width: 12px;
+   }
+
+   body::-webkit-scrollbar-thumb {
+     background:#F6509B;
+     border-radius: 20px;
+
+   }
+
+   body::-webkit-scrollbar-track {
+     background:#ffffff ;
+   }
+
+   body::-webkit-scrollbar-thumb:hover {
+     background: #384F58;
+     transition:2s;

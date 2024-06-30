@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Diversidad</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="MobileOptimized" content="width" />
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="img/logo.png">
+</head>
+
+<body>
+
+  <!-- Libreria de Java Script -->
+
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!--Java Script Movimiento de Menu -->
+
+  <script type="text/javascript">
+
+    $(document).ready(function () {
+      var altura = $('.menu').offset().top;
+
+      $(window).on('scroll', function () {
+        if ($(window).scrollTop() > altura) {
+          $('.menu').addClass('menu-fixed');
+        } else {
+          $('.menu').removeClass('menu-fixed');
+        }
+      });
+
+    });
+  </script>
+  <!-- Esstilos css -->
+
+  <style type="text/css">
+    * {
+      margin: 5px;
+      padding: 5px;
+    }
+
+
+    /*Editacion de hipervinculos */
+
+    a:link {
+      text-decoration: none
+    }
+
+    a:visited {
+      text-decoration: none;
+    }
+
+    a:active {
+      text-decoration: none
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    a:link {
+      text-decoration: none;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+      background-color: transparent;
+      -webkit-text-decoration-skip: objects;
+    }
+
+
+    /* Seleccion de texto color  */
+
+    ::selection {
+      background-color: #BE712D;
+      color: #ffffff;
+    }
+
+
+
+    /* Termina seleccion de texto de color */
+
+    .contenedor {
+      width: 100%;
+      height: 100px;
+      margin: auto;
+
+
+
+    }
+
+    /* Empieza header imagen */
+
+    header {
+      height: 200px;
+      width: 100%;
+      background: url(img/diversidad_logo.png);
+      background-size: 90%;
+
+      background-repeat: no-repeat;
+      -webkit-transition: all .5s ease-in-out;
+      -moz-transition: all .5s ease-in-out;
+      -o-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+
+    }
+
+    header:hover {
+      background: url(img/diversidad_logo2.png);
+      background-repeat: no-repeat;
+      background-size: 90%;
+      background-position: center;
+
+      transform: translate(-320px, 0);
+      -webkit-transform: translate(-320px, 0);
+      /** Safari & Chrome **/
+      -o-transform: translate(-320px, 0);
+      /** Opera **/
+      -moz-transform: translate(-320px, 0);
+      /** Firefox **/
+    }
+
+
+
+
+
+    nav {
+      margin: 20px auto;
+      max-width: 1000px;
+      width: 90%;
+
+    }
+
+    /* COlores aleatorios en menu */
+
+    nav ul li a:hover {
+      animation: color 3s;
+      animation-iteration-count: infinite;
+      transform: scale(1.2, 1.2);
+      box-shadow: 4px 3px 7px #353b48;
+
+    }
+
+
+    @keyframes color {
+      0% {
+        background: #ff7f50;
+      }
+      25% {
+        background: #ff6348;
+      }
+      50% {
+        background: #2ed573;
+      }
+      75% {
+        background: #7bed9f;
+      }
+      100% {
+        background: transparent;
+      }
+    }
+
+    /* termina colores aleatorios del menu */
+
+    /* Fuentes personalizadas */
+
+    @font-face {
+      font-family: fuente;
+      src: url(font/fuente.otf);
+    }
+
+
+
+    @font-face {
+      font-family: mac;
+      src: url(font/escritura.ttf);
+    }
+
+    @font-face {
+      font-family: tema;
+      src: url(font/tema.ttf);
+    }
+
+    /* Termina fuentes personalizadas */
+
+    li {
+      font-family: fuente;
+      font-size: 25px;
+    }
+
+
+    .seccion {
+      font-family: tema;
+      font-size: 20px;
+    }
+
+
+    .frase {
+      font-family: mac;
+      font-size: 30px;
+      text-shadow: 3px 3px 7px #4FED5E;
+    }
+
+    /* Imagen de escala a grises */
+
+    .imagen:hover {
+      filter: saturate(300%);
+      transform: scale(10, 10);
+      -webkit-transform: scale(1.1, 1.1) translate(7px, 7px);
+      /** Safari & Chrome **/
+      -o-transform: scale(1.2, 1.2) translateX(-10px, 10px);
+      /** Opera **/
+      -moz-transform: scale(1.2, 1.2) translateX(-10px, 10px);
+      /** Firefox **/
+      border-radius: 20px;
+    }
+
+
+    /* Menu desplegable jquery */
+
+    .menu-fixed {
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      max-width: 94.5%;
+      width: 94.5%;
+      -webkit-transition: all .5s ease-in-out;
+      -moz-transition: all .5s ease-in-out;
+      -o-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+
+    }
+
+
+    /* Estilos de Menu */
+
+    nav ul {
+      list-style: none;
+
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+
+    }
+
+
+    nav ul {
+      display: table;
+      /*overflow:hidden;*/
+      width: 100%;
+      background: url(img/menu8.jpg);
+      position: relative;
+      box-shadow: 4px 4px 5px black;
+
+
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+    }
+
+
+    nav ul li {
+      display: table-cell;
+
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+
+    }
+
+    /* Submenu */
+
+    nav ul li:hover ul {
+      display: block;
+      height: 100%;
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+    }
+
+    nav ul li ul {
+      display: block;
+      position: absolute;
+      background: #353b48;
+      left: 0;
+      right: 0;
+      overflow: hidden;
+      height: 0%;
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+    }
+
+
+
+
+    nav ul li ul {
+      display: none;
+
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+    }
+
+    nav ul li a {
+      color: #fff;
+      display: block;
+      line-height: 20px;
+      padding: 20px;
+      position: relative;
+      text-align: center;
+      text-decoration: none;
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+
+    }
+
+
+    .contenido {
+      height: 550px;
+
+    }
+
+    .section {
+      width: 400px;
+      height: 500px;
+
+      padding: 10px;
+      margin: 10px;
+      border-radius: 10px;
+      float: left;
+
+    }
+
+
+    .aside {
+      width: 100%;
+      height: 100%;
+      background: #16a085;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 10px;
+      float: right;
+      box-shadow: 2px 2px 3px black;
+      float: left;
+      -webkit-transition: all .5s ease-in-out;
+      -moz-transition: all .5s ease-in-out;
+      -o-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+    }
+
+
+    .Article {
+      height: 97px;
+      background: #A3CB38;
+      font-family: tema;
+      box-shadow: 2px 2px 3px black;
+      margin: 5px;
+      padding: 5px;
+      border-radius: 10px;
+
+
+    }
+
+    .complemento {
+      width: 600px;
+      height: 750px;
+      background: #fff;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 10px;
+      float: right;
+
+
+
+      float: left;
+    }
+
+
+
+    .Article:hover {
+      background: cyan;
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+    }
+
+    .aside:hover {
+      background: #badc58;
+      transform: scale(10, 10);
+      -webkit-transform: scale(1, 1) translate(7px, 7px);
+      /** Safari & Chrome **/
+      -o-transform: scale(1.2, 1.2) translateX(-10px, 10px);
+      /** Opera **/
+      -moz-transform: scale(1.2, 1.2) translateX(-10px, 10px);
+      /** Firefox **/
+      border-radius: 20px;
+      box-shadow: 4px 4px 7px #000000;
+    }
+
+    /* Imagenes */
+
+    .imagen {
+      background-attachment: fixed;
+      -webkit-transition: all .5s ease-in-out;
+      -moz-transition: all .5s ease-in-out;
+      -o-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+
+    }
+
+
+
+
+
+    .active {
+      background: #037E8C;
+      font-weight: bold;
+    }
+
+    .acerca {
+      position: fixed;
+      bottom: 0px;
+      right: 0px;
+      background: #cc8e35;
+      height: 70px;
+      width: 195px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: fuente;
+      font-size: 28px;
+      box-shadow: 3px 3px 5px black;
+
+      cursor: pointer;
+      border-radius: 20px;
+
+    }
+
+    .acerca:hover {
+      background: #ffb142;
+      -webkit-transition: all .5s ease-in-out;
+      -moz-transition: all .5s ease-in-out;
+      -o-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+    }
+
+    body::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    body::-webkit-scrollbar-thumb {
+      background: #27ae60;
+      border-radius: 5px;
+    }
+
+    body::-webkit-scrollbar-track {
+      background: #353b48;
+    }
+
+    body::-webkit-scrollbar-thumb:hover {
+      background: #2ecc71;
+    }
+  </style>
+
+  </head>
+
+  <!--Menu principal en html -->
+
+  <body>
+
+    <span class="acerca">
+      <a href="AcercadeNosotros.html">Acerca de Nosotros</a>
+    </span>
+
+    <div class="contenedor">
+      <header></header>
+      <nav class="menu">
+        <ul>
+
+
+          <li>
+            <a href="index.html">
+              <span></span>Inicio</a>
+          </li>
+
+          <li>
+            <a href="Ecosistema.html">
+              <span></span>Ecosistema</a>
+
+            <ul>
+
+              <li>
+                <a href="Ecosistema-Acuatico.html">
+                  <span></span>Ecosistema Acuatico</a>
+              </li>
+
+              <li>
+                <a href="Ecosistema-Terrestre.html">
+                  <span></span>Ecosistema Terrestre</a>
+              </li>
+
+              <li>
+                <a href="Ecosistema_Fragmentado.html">
+                  <span></span>Ecosistema Fragmentado</a>
+              </li>
+            </ul>
+
+
+          </li>
+
+          <li>
+            <a class="active" href="Biodiversidad.html">
+              <span></span>Diversidad</a>
+
+            <ul>
+              <li>
+                <a href="Biodiversidad_Genetica.html">
+                  <span></span>Diversidad genetica</a>
+              </li>
+
+              <li>
+                <a href="Biodiversidad_Organica.html">
+                  <span></span>Diversidad Organica</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="sustentabilidad.html">
+              <span></span>Sustentabilidad</a>
+
+
+            <ul>
+
+              <li>
+                <a href="sustentabilidad_Economica.html">
+                  <span></span>Sustentabilidad Economica</a>
+              </li>
+
+
+              <li>
+                <a href="sustentabilidad_Social.html">
+                  <span></span>Sustentabilidad Social</a>
+              </li>
+
+            </ul>
+
+
+
+          </li>
+
+          <li>
+            <a href="Factores_Ambientales.html">
+              <span></span>Factores ambientales</a>
+            <ul>
+              <li>
+                <a href="factoes_bioticos.html">
+                  <span></span>Factores Bioticos</a>
+              </li>
+
+              <li>
+                <a href="factores_abioticos.html">
+                  <span></span>Factores Abioticos</a>
+              </li>
+            </ul>
+          </li>
+
+
+
+
+        </ul>
+      </nav>
+      <div>
+        <h2 align="center" class="frase">Dejemos que la naturaleza actúe a su aire; ella conoce su oficio mejor que nosotros</h2>
+
+
+        <h2 align="center" class="frase">Michel Eyquem de Montaigne, filósofo humanista. </h2>
+
+        <img class="imagen" src="img/nature_mountain_range_fog_sunrise_landscape_tree_mac_ox_ultrahd_4k_wallpaper_background_3840x2160.jpg"
+          width="100%" height="100%">
+
+        <table cellspacing="20px">
+          <tr>
+            <th>
+              <h1 align="center" class="frase">Que es la diversidad</h1>
+            </th>
+            <th>
+              <h1 class="frase" align="center">Por que es Importante</h1>
+            </th>
+          </tr>
+
+          <tr>
+
+            <td>
+              <div class="aside">
+                <p align="justify" class="seccion">
+                  <p align="justify" class="seccion">La biodiversidad es la suma de todas las diferentes especies de animales, plantas, hongos y organismos
+                    microbianos que viven en la Tierra y como también la variedad de hábitats en los que viven. Los científicos
+                    estiman que habitan más de 10 millones de especies diferentes en la Tierra. La biodiversidad es la base
+                    de todo, desde la producción de alimentos hasta la investigación médica. Los humanos usan alrededor de
+                    40,000 especies de plantas y animales diariamente. Muchas personas de todo el mundo todavía dependen
+                    de especies silvestres para algunos -o todos- sus alimentos, refugio y ropa. Todas nuestras plantas y
+                    animales domésticos provienen de especies ancestrales que habitaban de forma silvestre. Además, casi
+                    el 40 por ciento de los productos farmacéuticos utilizados en los Estados Unidos y en gran parte del
+                    mundo, se basan o sintetizan a partir de compuestos naturales que se encuentran en plantas, animales
+                    o microorganismos. La variedad de organismos vivos que se encuentran en un ambiente determinado, combinado
+                    con los factores físicos y ambientales que los afectan, conforman lo que se conoce como un ecosistema.
+                    Los ecosistemas saludables son vitales para la vida; regulan muchos de los sistemas químicos y climáticos
+                    que hacen que exista aire limpio, agua limpia y abundante oxígeno. Los bosques, por ejemplo, regulan
+                    la cantidad de dióxido de carbono en el aire, producen oxígeno como un subproducto de la fotosíntesis
+                    y controlan la lluvia y la erosión del suelo. Los ecosistemas, a su vez, dependen de la salud y continua
+                    vitalidad de los organismos individuales que los componen. Eliminar solo una especie de un ecosistema
+                    puede provocar que el ecosistema funcione de manera negativa. </p>
+                </p>
+              </div>
+            </td>
+
+
+            <td>
+              <div class="aside">
+                <P class="seccion" aling="justify">
+                  <p align="justify " class="seccion">Desde que se empezó a estudiar la vida se encuentran especies nuevas cada año. En la actualidad en el planeta
+                    Tierra existe una gran diversidad, es decir, existen un gran número de especies de seres vivos, tanto
+                    plantas y animales, como seres microscópicos. Esta enorme diversidad de vida que hay en el planeta no
+                    siempre ha estado. En determinadas ocasiones de la historia planetaria se han dado explosiones de diversidad,
+                    donde debido a causas medioambientales surgía una gran cantidad de nuevas especies. Se calcula que existen
+                    entre 2 y 100 millones de especies macroscópicas con unas 10 millones de especies como número más probable.
+                    A ellas hay que sumar todas las microscópicas, que son muchas más. El número de especies del planeta
+                    ha fluctuado con el tiempo de forma natural. Sin embargo ahora es muchas veces la mano del hombre la
+                    que causa la desaparición de las especies. La diversidad biológica o biodiversidad es un recurso estratégico
+                    para el ser humano que debe ser mantenido. Históricamente el ser humano se ha aprovechado de la evolución
+                    de todos los seres vivos. Muchos medicamentos, antibióticos, anticoagulantes, vacunas, etc. se han desarrollado
+                    partiendo de moléculas encontradas en otros seres vivos. No solo eso, también tejidos y alimentos pueden
+                    ser obtenidos gracias al estudio de muy variados seres vivos. La pérdida de biodiversidad puede acarrear
+                    la perdida de potenciales herramientas para el ser humano. De un tiempo a esta parte la conservación
+                    se ha convertido en un valor añadido, puesto que el turismo en regiones bien conservadas, donde disfrutar
+                    de la naturaleza se ha convertido en un interesante reclamo, que ha ayudado a la conservación de muchas
+                    regiones y al conocimiento de los problemas ambientales. Desde un punto de vista científico, tal vez
+                    menos aplicado pero no por ello menos importante, el estudio de la gran diversidad que encontramos en
+                    la actualidad en la tierra puede ayudar a desentrañar las incógnitas que presenta la evolución de la
+                    vida en la Tierra. Además el estudio de la biodiversidad ha permitido a la comunidad científica evaluar
+                    la capacidad de la biosfera de sostener la creciente vida humana. Por otra parte el ser humano no entiende
+                    todavía el funcionamiento de los ecosistemas debido a la enorme complejidad de interacciones que tienen
+                    lugar en ellos. Es por ello que la conservación de las especies de seres vivos es importante para mantener
+                    los ecosistemas que conocemos sin alteración, puesto que las modificaciones pueden acabar, como se ha
+                    visto en ecosistemas que se han alterado, en la degradación completa y la pérdida de un ecosistema, dejando
+                    muchas veces la tierra baldía y en progreso de desertización. Fue ya en 1992 en la cumbre de la Tierra
+                    que tuvo lugar en Rio de Janeiro donde se reconoció la necesidad de la humanidad de preservar las especies
+                    conocidas y conciliarlas con el progreso de la especie humana. Con el fin de concienciar al gran público
+                    el 2010 se declaró año de la biodiversidad. </p>
+                  <img class="imagen" src="img/diversidad6.jpg">
+                </P>
+              </div>
+            </td>
+        </table>
+
+        <img class="imagen" src="img/diversidad7.jpg" width="100%" height="100%">
+
+
+        <table cellspacing="20px">
+          <tr>
+            <th>
+              <h1 align="center" class="frase">Componentes de la biodiversidad</h1>
+            </th>
+            <th>
+              <h1 class="frase" align="center">Cuando se festeja .??</h1>
+            </th>
+          </tr>
+
+          <tr>
+
+            <td>
+              <div class="aside">
+                <p align="justify" class="seccion">
+                  <p align="justify" class="seccion">Sin dudas, y resulta quizás evidente, el componente que más rápidamente se asocia a la biodiversidad es
+                    la diversidad de especies, es decir, todos los tipos distintos de especies de seres vivos que existen.
+                    Sin embargo, no es el único. La enorme cantidad de especies diferentes de la Tierra contiene una variedad
+                    mucho mayor de genes. La diversidad genética, el otro componente de la biodiversidad permite que la vida
+                    en el planeta se adapte y sobreviva a cambios ambientales drásticos, lo que la hace vital para sostener
+                    la vida en él. Por otra parte, la diversidad de los ecosistemas, es decir, la variedad de desiertos,
+                    pastizales bosques, montañas, océanos, lagos, ríos y humedales de la Tierra, es otro de los componentes
+                    importantes de la biodiversidad. Cada uno de ellos es un reservorio de genes y de especies. Por último,
+                    otro componente importante es la diversidad funcional, es decir, la variedad de procesos que ocurren
+                    en los ecosistema cuando la especies interaccionan entre sí en las cadenas y redes alimentarias. </p>
+                </p>
+              </div>
+            </td>
+
+
+            <td>
+              <div class="aside">
+                <P class="seccion" aling="justify">
+                  <p align="justify " class="seccion">Anualmente, el 22 de mayo de cada año se celebra el Día Internacional de la Diversidad Biológica proclamado
+                    por la Asamblea General de las Naciones Unidas con el propósito de informar y concienciar a la población
+                    y a los Estados sobre las cuestiones relativas a la biodiversidad. La fecha se eligió para que coincidiera
+                    con el aniversario de la aprobación del Convenio sobre la Diversidad Biológica en 1992 </P>
+              </div>
+            </td>
+        </table>
+
+        <video class="imagen" src="videos/biodiversidad.mp4" autobuffer autoloop loop controls poster="/images/video.png" width="100%"></video>
+
+      </div>
+
+  </body>
+
+</html>

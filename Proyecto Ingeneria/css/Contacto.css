@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+:focus{
+  outline: none;
+}
+body{
+  font-family:'Open Sans';
+  background: #111;
+
+}
+
+/*Formulario*/
+.form_wrap{
+  width: 1050px;
+  height: 530px;
+  margin: 50px auto;
+  display: flex;
+  background:#fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(250, 250, 250, 0.3)
+}
+/*Informacion del contacto*/
+
+.cantact_info::before{
+  content: '';
+   width: 100%;
+   height:100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   background: #4091EC;
+   opacity: 0.9;
+}
+
+.cantact_info{
+  width: 38%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: url(../img/fondo.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.info_title,
+.info_items{
+  position:relative;
+  z-index: 2;
+  color:#fff;
+}
+
+.info_title{
+  margin-bottom: 60px;
+}
+.info_title span{
+  font-size: 100px;
+  display: block;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.info_title h2{
+  font-size: 35px;
+  text-align: center;
+}
+
+.info_items p{
+  display: flex;
+  align-items:center;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom:10px;
+}
+
+.info_items p:nth-child(1) span{
+  font-size: 30px;
+  margin-right: 10px;
+}
+.info_items p:nth-child(2) span{
+font-size: 50px;
+margin-right:15px;
+margin-left: 4px;
+}
+
+/*Formulario del contacto*/
+form.form_contact{
+  background: #111;
+  width: 62%;
+  padding: 30px 40px;
+}
+form.form_contact h2{
+font-size: 25px;
+font-weight:600;
+letter-spacing: 2px;
+color:white;
+margin-bottom: 30px;
+}
+
+form.form_contact .user_info{
+ display:flex;
+ flex-direction:column;
+}
+form.form_contact label{
+  color: #fff;
+  font-weight: 550;
+}
+form.form_contact input,
+form.form_contact textarea{
+
+  width: 100%;
+  padding: 8px 0px 5px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom:5px #E1C42E solid ;
+  font-family:'Open Sans';
+  color: #000;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+/*Boton Send Message*/
+form.form_contact input[type="submit"]{
+  outline: none;
+  border: none;
+  width: 320px;
+  height: 55px;
+  background: #4285F4;
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+  transition-property: border-left, border-right, box-shadow;
+  align-self: flex-end;
+  cursor: point;
+
+}
+
+form.form_contact input[type="submit"]:hover{
+  border-left: solid 8px rgba(255, 255, 255, 0.5);
+  border-right: solid 8px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 100px rgba(66, 133, 244, 0.8);
+}
+
+/* Ventana de errores*/
+.modal_wrap{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mensaje_modal{
+    background: #fff;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+    width: 400px;
+    padding: 30px 20px 15px;
+}
+
+.mensaje_modal h3{
+    text-align: center;
+    font-family: 'Ubuntu';
+	font-size: 20px;
+	font-weight: 400;
+}
+
+.mensaje_modal h3:after{
+    content: '';
+	display: block;
+	width: 100%;
+	height: 1px;
+	background: #C5C5C5;
+	margin: 10px 0px 15px;
+}
+
+.mensaje_modal p{
+    font-size: 16px;
+    color: #606060;
+}
+
+.mensaje_modal p:before{
+    content: "\f00d";
+    font-family: FontAwesome;
+    display: inline-block;
+    color: #E25151;
+    margin-right: 8px;
+}
+
+#btnClose{
+    display: inline-block;
+	padding: 3px 10px;
+	margin-top: 10px;
+
+	background: #E25151;
+	color: #fff;
+	border: 2px solid #B14141;
+	cursor: pointer;
+
+	float: right;
+}
+
+
+.btn-inicio{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 15px;
+  align-items: center;
+  color: #fff;
+  letter-spacing: 5px;
+  font-size: 24px;
+  display:inline-block;
+  height: 60px;
+  width: 110px;
+  background: #FB9100;
+  font-family:'Open Sans';
+  text-decoration: none;
+  overflow: hidden;
+  transition: 0.2s;
+  border-radius:3px;
+}
+
+.btn-inicio:hover{
+  background: #FEC14F ;
+  box-shadow: 0 0 10px #FEC14F , 0 0 40px #FEC14F , 0 0 80px #FEC14F ;
+  transition: .6s;
+}
+
+/* MENSAJE EXITOSO*/
+
+.mensaje-exito{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mensaje-exito h1{
+    font-size: 35px;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.mensaje-exito a{
+    display: block;
+    padding: 10px 30px;
+    background: #4091EC;
+    text-decoration: none;
+    color: #fff;
+}
+
+.mensaje-exito a:hover{
+    background: #3371B6;
+}

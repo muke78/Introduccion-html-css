@@ -1,0 +1,889 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Factores Bioticos</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="MobileOptimized" content="width" />
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <!-- Libreria de Java Script -->
+
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!--Java Script Movimiento de Menu -->
+
+  <script type="text/javascript">
+
+    $(document).ready(function () {
+      var altura = $('.menu').offset().top;
+
+      $(window).on('scroll', function () {
+        if ($(window).scrollTop() > altura) {
+          $('.menu').addClass('menu-fixed');
+        } else {
+          $('.menu').removeClass('menu-fixed');
+        }
+      });
+
+    });
+  </script>
+  <!-- Esstilos css -->
+
+  <style type="text/css">
+    * {
+      margin: 5px;
+      padding: 5px;
+    }
+
+
+    /*Editacion de hipervinculos */
+
+    a:link {
+      text-decoration: none
+    }
+
+    a:visited {
+      text-decoration: none;
+    }
+
+    a:active {
+      text-decoration: none
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    a:link {
+      text-decoration: none;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+      background-color: transparent;
+      -webkit-text-decoration-skip: objects;
+    }
+
+
+    /* Seleccion de texto color  */
+
+    ::-moz-selection {
+      background-color: #BE712D;
+      color: #ffffff;
+    }
+
+
+
+    /* Termina seleccion de texto de color */
+
+    .contenedor {
+      width: 100%;
+      height: 100px;
+      margin: auto;
+
+
+
+    }
+
+    /* Empieza header imagen */
+
+    header {
+      height: 200px;
+      width: 100%;
+      background: url(img/FB.png);
+      background-size: 90%;
+
+      background-repeat: no-repeat;
+      -webkit-transition: all .5s ease-in-out;
+      -moz-transition: all .5s ease-in-out;
+      -o-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+
+    }
+
+    header:hover {
+      background: url(img/FB2.png);
+      background-repeat: no-repeat;
+      background-size: 90%;
+      background-position: center;
+
+      transform: translate(-320px, 0);
+      -webkit-transform: translate(-320px, 0);
+      /** Safari & Chrome **/
+      -o-transform: translate(-320px, 0);
+      /** Opera **/
+      -moz-transform: translate(-320px, 0);
+      /** Firefox **/
+    }
+
+
+
+
+
+    nav {
+      margin: 20px auto;
+      max-width: 1000px;
+      width: 90%;
+
+    }
+
+    /* COlores aleatorios en menu */
+
+    nav ul li a:hover {
+      animation: color 3s;
+      animation-iteration-count: infinite;
+      transform: scale(1.2, 1.2);
+      box-shadow: 4px 3px 7px #353b48;
+
+    }
+
+
+    @keyframes color {
+      0% {
+        background: #ff7f50;
+      }
+      25% {
+        background: #ff6348;
+      }
+      50% {
+        background: #2ed573;
+      }
+      75% {
+        background: #7bed9f;
+      }
+      100% {
+        background: transparent;
+      }
+    }
+
+    /* termina colores aleatorios del menu */
+
+    /* Fuentes personalizadas */
+
+    @font-face {
+      font-family: fuente;
+      src: url(font/fuente.otf);
+    }
+
+
+
+    @font-face {
+      font-family: mac;
+      src: url(font/escritura.ttf);
+    }
+
+    @font-face {
+      font-family: tema;
+      src: url(font/tema.ttf);
+    }
+
+    /* Termina fuentes personalizadas */
+
+    li {
+      font-family: fuente;
+      font-size: 25px;
+    }
+
+
+    .seccion {
+      font-family: tema;
+      font-size: 20px;
+    }
+
+
+    .frase {
+      font-family: mac;
+      font-size: 30px;
+      text-shadow: 3px 3px 7px #4FED5E;
+    }
+
+    /* Imagen de escala a grises */
+
+    .imagen:hover {
+      filter: saturate(300%);
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+    }
+
+
+    /* Menu desplegable jquery */
+
+    .menu-fixed {
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      max-width: 94.5%;
+      width: 94.5%;
+      -webkit-transition: all .5s ease-in-out;
+      -moz-transition: all .5s ease-in-out;
+      -o-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+
+    }
+
+
+    /* Estilos de Menu */
+
+    nav ul {
+      list-style: none;
+
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+
+    }
+
+
+    nav ul {
+      display: table;
+      /*overflow:hidden;*/
+      width: 100%;
+      background: url(img/amanecer.jpg);
+      position: relative;
+      box-shadow: 4px 4px 5px black;
+
+
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+    }
+
+
+    nav ul li {
+      display: table-cell;
+
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+
+    }
+
+    /* Submenu */
+
+    nav ul li:hover ul {
+      display: block;
+      height: 100%;
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+    }
+
+    nav ul li ul {
+      display: block;
+      position: absolute;
+      background: #353b48;
+      left: 0;
+      right: 0;
+      overflow: hidden;
+      height: 0%;
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+    }
+
+
+
+
+    nav ul li ul {
+      display: none;
+
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+    }
+
+    nav ul li a {
+      color: #fff;
+      display: block;
+      line-height: 20px;
+      padding: 20px;
+      position: relative;
+      text-align: center;
+      text-decoration: none;
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+
+    }
+
+
+    .contenido {
+      height: 550px;
+
+    }
+
+    .section {
+      width: 400px;
+      height: 500px;
+
+      padding: 10px;
+      margin: 10px;
+      border-radius: 10px;
+      float: left;
+
+    }
+
+
+    .aside {
+      width: 1005;
+      height: 100%;
+      background: #16a085;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 10px;
+      float: right;
+      box-shadow: 2px 2px 3px black;
+
+
+      float: left;
+    }
+
+
+    .Article {
+      height: 97px;
+      background: #A3CB38;
+      font-family: tema;
+      box-shadow: 2px 2px 3px black;
+      margin: 5px;
+      padding: 5px;
+      border-radius: 10px;
+
+
+    }
+
+    .complemento {
+      width: 600px;
+      height: 750px;
+      background: #fff;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 10px;
+      float: right;
+
+
+
+      float: left;
+    }
+
+
+
+    .Article:hover {
+      background: cyan;
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+    }
+
+    /* .aside:hover {
+      background: #badc58;
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+    }
+
+    /* Imagenes */
+
+    .imagen {
+      background-attachment: fixed;
+
+    }
+
+
+
+
+
+    .active {
+      background: #037E8C;
+      font-weight: bold;
+    }
+
+    .acerca {
+      position: fixed;
+      bottom: 0px;
+      right: 0px;
+      background: #cc8e35;
+      height: 70px;
+      width: 195px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: fuente;
+      font-size: 28px;
+      box-shadow: 3px 3px 5px black;
+
+      cursor: pointer;
+      border-radius: 20px;
+
+    }
+
+    .acerca:hover {
+      background: #ffb142;
+      -webkit-transition: all .5s ease-in-out;
+      -moz-transition: all .5s ease-in-out;
+      -o-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+    }
+
+    .contenido {
+      display: flex;
+      background: transparent;
+    }
+
+    h1 {
+      color: black;
+      font-size: 40px;
+
+    }
+
+
+
+    h2 {
+      color: black;
+      font-size: 40px;
+    }
+
+    div .aside {
+      width: 60%;
+      height: 95%;
+      background: #75F312;
+      font-size: 30px;
+      color: black;
+      text-align: justify;
+      border-radius: 0px 30px 0px 30px;
+      box-shadow: 5px 5px 8px;
+
+
+    }
+
+    div .c2 {
+      width: 100%;
+      /*height: 450px;*/
+      background: #00FF00;
+      font-size: 30px;
+      color: black;
+      text-align: justify;
+      border-radius: 0px 30px 0px 30px;
+      box-shadow: 5px 5px 8px;
+
+
+
+    }
+
+    .image {
+      background: transparent;
+      width: 40%;
+      filter: saturate(300%);
+
+    }
+
+    .i1 {
+      height: 95%;
+      background: url(img/s7.jpg);
+      background-repeat: no-repeat;
+      width: 95%;
+      background-position: center;
+
+    }
+
+    /*.i2{
+  background: url(img/s6.png);
+  background-repeat: no-repeat;
+  width: 80%;
+  height: 100%;
+  
+}
+
+.c1{
+  background: red;
+  display: flex;
+  height: 100%;
+} */
+
+    .title {
+      height: 60%;
+      width: 98%;
+      background: #40FF00;
+      border-radius: 0px 20px 0px 20px;
+      box-shadow: 5px 5px 7px;
+      animation: verde 5s;
+      animation-iteration-count: infinite;
+      text-align: center;
+    }
+
+
+
+    div .aside1 {
+      width: 100%;
+      height: 95%;
+      background: white;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 10px;
+      float: right;
+      box-shadow: 2px 2px 3px black;
+      float: left;
+      box-shadow: none;
+      transition: background 2s, box-shadow 2s, transform 2s;
+      transform: none;
+      padding: 0px;
+      margin: auto;
+
+    }
+
+    .aside1:hover {
+      box-shadow: 7px 5px 8px black;
+      transform: scale(1.03, 1.03);
+      -webkit-transform: all 1s scale(1.03, 1.03);
+      -moz-transform: all 2s scale(1.1, 1.1);
+      -o-transform: all 2s scale(1.1, 1.1);
+      -ms-transform: all 2s scale(1.1, 1.1);
+
+    }
+
+    @keyframes verde {
+      0% {
+        background: #F8C471;
+      }
+      25% {
+        background: #F5B041;
+      }
+      50% {
+        background: #F39C12;
+      }
+      75% {
+        background: #D68910;
+      }
+      100% {
+        background: #F5B041;
+      }
+
+    }
+
+    div .aside2 {
+      width: 100%;
+      height: 95%;
+      background: white;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 3px black;
+      box-shadow: none;
+      transition: background 2s, box-shadow 2s, transform 2s, color 2s;
+      transform: none;
+      padding: 0px;
+      margin: auto;
+      color: black;
+      font-size: 25px
+    }
+
+    .aside2:hover {
+      box-shadow: 7px 5px 8px black;
+      background: #32CD32;
+      color: white;
+      transform: scale(1.03, 1.03);
+      -webkit-transform: all 1s scale(1.03, 1.03);
+      -moz-transform: all 2s scale(1.1, 1.1);
+      -o-transform: all 2s scale(1.1, 1.1);
+      -ms-transform: all 2s scale(1.1, 1.1);
+
+    }
+
+    .aside3 {
+      transform: none;
+      transition: transform 2s;
+    }
+
+    .aside3:hover {
+      transform: rotate(360deg);
+      -webkit-transform: all 2s rotate(360deg);
+    }
+
+    body::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    body::-webkit-scrollbar-thumb {
+      background: #27ae60;
+      border-radius: 5px;
+    }
+
+    body::-webkit-scrollbar-track {
+      background: #353b48;
+    }
+
+    body::-webkit-scrollbar-thumb:hover {
+      background: #2ecc71;
+    }
+  </style>
+
+  </head>
+
+  <body>
+    <span class="acerca">
+      <a href="AcercadeNosotros.html">Acerca de Nosotros</a>
+    </span>
+
+    <div class="contenedor">
+      <header></header>
+      <nav class="menu">
+        <ul>
+
+
+          <li>
+            <a href="index.html">
+              <span></span>Inicio</a>
+          </li>
+
+          <li>
+            <a href="Ecosistema.html">
+              <span></span>Ecosistema</a>
+
+            <ul>
+
+              <li>
+                <a href="Ecosistema-Acuatico.html">
+                  <span></span>Ecosistema Acuatico</a>
+              </li>
+
+              <li>
+                <a href="Ecosistema-Terrestre.html">
+                  <span></span>Ecosistema Terrestre</a>
+              </li>
+
+              <li>
+                <a href="Ecosistema_Fragmentado.html">
+                  <span></span>Ecosistema Fragmentado</a>
+              </li>
+            </ul>
+
+
+          </li>
+
+          <li>
+            <a href="Biodiversidad.html">
+              <span></span>Biodiversidad</a>
+
+            <ul>
+              <li>
+                <a href="Biodiversidad_Genetica.html">
+                  <span></span>Diversidad genetica</a>
+              </li>
+
+              <li>
+                <a href="Biodiversidad_Organica.html">
+                  <span></span>Diversidad Organica</a>
+              </li>
+
+            </ul>
+
+
+
+
+          </li>
+
+          <li>
+            <a href="sustentabilidad.html">
+              <span></span>Sustentabilidad</a>
+
+
+            <ul>
+
+              <li>
+                <a href="sustentabilidad_Economica.html">
+                  <span></span>Sustentabilidad Economica</a>
+              </li>
+
+
+              <li>
+                <a href="sustentabilidad_Social.html">
+                  <span></span>Sustentabilidad Social</a>
+              </li>
+            </ul>
+
+
+
+          </li>
+
+          <li>
+            <a class="active" href="Factores_Ambientales.html">
+              <span></span>Factores ambientales</a>
+            <ul>
+
+              <li>
+                <a class="active" href="factoes_bioticos.html">
+                  <span></span>Factores Bioticos</a>
+              </li>
+
+              <li>
+                <a href="factores_abioticos.html">
+                  <span></span>Factores Abioticos</a>
+              </li>
+
+            </ul>
+          </li>
+
+
+
+
+        </ul>
+      </nav>
+      <div>
+        <h2 align="center" class="frase">”El arte, la gloria, la libertad se marchitan, pero la naturaleza siempre permanece bella”</h2>
+
+        <h2 align="center" class="frase">-George Gordon Byron, poeta inglés.
+
+        </h2>
+
+        <img class="imagen" src="img/naturaleza.jpg" width="100%" height="100%">
+
+      </div>
+
+      <div class="title">
+        <h1 class="frase">Factores Bioticos</h1>
+      </div>
+
+
+      <table cellpadding="20px">
+        <tr>
+          <td>
+            <div class="aside1">
+              <p class="seccion" align="justify">
+                Los factores bióticos son los organismos vivos que influencian la forma de un ecosistema. Pueden referirse a la flora y la
+                fauna de un lugar y sus interacciones. Los individuos deben tener comportamiento y características fisiológicas
+                específicas que permitan su supervivencia y su reproducción en un ambiente definido. La condición de compartir
+                un ambiente engendra competencia u otros tipos de interacciones entre las especies, dados por el alimento,
+                el espacio, etc. Como consecuencia modifican las poblaciones de otras especies.1​ Una población es un conjunto
+                de organismos de una especie que están en una misma zona. Se refiere a organismos vivos, sean unicelulares
+                o pluricelulares. En contraste con los factores bióticos están los factores abióticos, aquellos que no son
+                vivos, no forman parte o no son productos de los seres vivos. Son los factores inertes: climático, geológico
+                o geográfico, presentes en el medio ambiente y que afectan a los ecosistemas.
+              </p>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <img class="imagen" src="img/perro.jpg" width="100%" height="700px">
+          </td>
+        </tr>
+
+      </table>
+
+      <table cellspacing="15px">
+        <tr>
+          <th>
+            <h1 class="frase">Productores</h1>
+          </th>
+
+          <th>
+            <h1 class="frase">Consumidores</h1>
+          </th>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="aside2">
+              <p class="seccion" align="justify">
+                Los seres bióticos productores son aquellos que se caracterizan porque son capaces de generar su materia orgánica basándose
+                en material inorgánico que se encuentre en el ambiente. </br>
+
+                Los organismos que tienen esta capacidad de formar la propia materia orgánica se denominan autótrofos.
+                </br>
+                Existen básicamente dos fuentes a través de las cuales los organismos pueden generar su propia materia orgánica: a través
+                de la energía solar (procesos fotosintéticos) o a través de la energía generada de compuestos químicos (procesos
+                quimiosintéticos).
+              </p>
+            </div>
+          </td>
+
+
+          <td>
+            <div class="aside2">
+              <p class="seccion" align="justify">
+                A diferencia de los organismos productores, los consumidores requieren necesariamente de otros seres vivos para poder sintetizar
+                su propio alimento. También son conocidos como organismos heterótrofos.
+                </br>
+                Los heterótrofos se clasifican en 5 grupos:
+                <ol>
+                  <li class="seccion">Los herbívoros, que se alimentan únicamente de plantas y hierbas</li>
+                  <li class="seccion">Los carnívoros, que centran su consumo en otros organismos tanto carnívoros como herbívoros</li>
+                  <li class="seccion">Los omnívoros, que se alimentan tanto de plantas y hierbas como de otros organismos animales</li>
+                  <li class="seccion">Los carroñeros, que comen animales muertos</li>
+                  <li class="seccion">Los detritívoros, que se alimentan de materia en descomposición.</li>
+                </ol>
+              </p>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <img align="center" class="imagen" src="img/hoja.jpg" width="90%" height="50%" align="ceneter">
+    </div>
+    </td>
+    <td>
+      <img align="center" class="imagen" src="img/guepardo.jpg" width="90%" height="42%" align="ceneter">
+      </div>
+    </td>
+    </tr>
+
+    <tr>
+      <th colspan="2">
+        <h1 class="frase">Descomponedores</h1>
+      </th>
+    </tr>
+
+    <tr>
+      <td colspan="2">
+        <div class="aside2">
+          <p class="seccion" align="justify">
+            <font size="5px"> Son los encargados de descomponer materia correspondiente a organismos muertos. A través de este proceso de descomposición,
+              los organismos descomponedores generan materia inorgánica, que es aprovechada por los factores bióticos productores.</font>
+          </p>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="2">
+        <img align="center" class="imagen" src="img/hongo.jpg" width="100%" height="50%" align="ceneter">
+      </td>
+    </tr>
+    </table>
+
+    <center>
+      <audio src="musica/m2.mp3" controls="controls" autoplay></audio>
+    </center>
+
+    </div>
+    </div>
+  </body>
+
+</html>

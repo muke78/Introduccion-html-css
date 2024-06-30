@@ -1,0 +1,912 @@
+<!-- Empiezo de html -->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="MobileOptimized" content="width" />
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="shortcut icon" href="img/logo.png">
+  <title>Ecologia </title>
+
+  <!-- Libreria de Java Script -->
+
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!--Java Script Movimiento de Menu -->
+
+  <script type="text/javascript">
+
+    $(document).ready(function () {
+      var altura = $('.menu').offset().top;
+
+      $(window).on('scroll', function () {
+        if ($(window).scrollTop() > altura) {
+          $('.menu').addClass('menu-fixed');
+        } else {
+          $('.menu').removeClass('menu-fixed');
+        }
+      });
+    });
+  </script>
+  <!-- Estilos css -->
+  <style type="text/css">
+    * {
+      margin: 5px;
+      padding: 5px;
+    }
+
+    /*Editacion de hipervinculos */
+
+    a:link {
+      text-decoration: none
+    }
+
+    a:visited {
+      text-decoration: none;
+    }
+
+    a:active {
+      text-decoration: none
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    a:link {
+      text-decoration: none;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+      background-color: transparent;
+      -webkit-text-decoration-skip: objects;
+    }
+
+    /* Seleccion de texto color  */
+
+    ::selection {
+      background-color: rgba(228, 135, 15, 0.911);
+      color: #ffffff;
+    }
+
+    /* Termina seleccion de texto de color */
+
+    .contenedor {
+      width: 100%;
+      height: 100px;
+      margin: auto;
+    }
+
+    /* Empieza header imagen */
+
+    header {
+      height: 250px;
+      width: 100%;
+      background: url(img/Logo.jpg);
+      background-size: 90%;
+
+      background-repeat: no-repeat;
+      -webkit-transition: all .5s ease-in-out;
+      -moz-transition: all .5s ease-in-out;
+      -o-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+
+    }
+
+    header:hover {
+      background: url(img/logo2.jpg);
+      background-repeat: no-repeat;
+      background-size: 90%;
+      background-position: center;
+
+      transform: translate(-320px, 0);
+      -webkit-transform: translate(-320px, 0);
+      /** Safari & Chrome **/
+      -o-transform: translate(-320px, 0);
+      /** Opera **/
+      -moz-transform: translate(-320px, 0);
+      /** Firefox **/
+    }
+
+    nav {
+      margin: 20px auto;
+      max-width: 1000px;
+      width: 90%;
+
+    }
+
+    /* COlores aleatorios en menu */
+
+    nav ul li a:hover {
+      animation: color 3s;
+      animation-iteration-count: infinite;
+      transform: scale(1.2, 1.2);
+      box-shadow: 4px 3px 7px #353b48;
+
+    }
+
+    @keyframes color {
+      0% {
+        background: #ff7f50;
+      }
+      25% {
+        background: #ff6348;
+      }
+      50% {
+        background: #2ed573;
+      }
+      75% {
+        background: #7bed9f;
+      }
+      100% {
+        background: transparent;
+      }
+    }
+
+    /* termina colores aleatorios del menu */
+
+    /* Fuentes personalizadas */
+
+    @font-face {
+      font-family: fuente;
+      src: url(font/fuente.otf);
+    }
+
+    @font-face {
+      font-family: mac;
+      src: url(font/escritura.ttf);
+    }
+
+    @font-face {
+      font-family: tema;
+      src: url(font/tema.ttf);
+    }
+
+    @font-face {
+      font-family: articulo;
+      src: url(font/Articulos.ttf);
+    }
+
+    /* Termina fuentes personalizadas */
+
+    li {
+      font-family: fuente;
+      font-size: 25px;
+    }
+
+    .articulo {
+      font-family: articulo;
+      font-size: 30px;
+
+    }
+
+
+    .seccion {
+      font-family: tema;
+      font-size: 20px;
+    }
+
+
+    .frase {
+      font-family: mac;
+      font-size: 40px;
+      text-shadow: 3px 3px 7px #4FED5E;
+    }
+
+    /* Imagen de escala a grises */
+
+    .imagen:hover {
+      filter: saturate(300%);
+      
+    }
+
+
+    /* Menu desplegable jquery */
+
+    .menu-fixed {
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      max-width: 94.5%;
+      width: 94.5%;
+      -webkit-transition: all .5s ease-in-out;
+      -moz-transition: all .5s ease-in-out;
+      -o-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+
+    }
+
+    /* Estilos de Menu */
+
+    nav ul {
+      list-style: none;
+
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+
+    }
+
+
+    nav ul {
+      display: table;
+      /*overflow:hidden;*/
+      width: 100%;
+      background: url(img/fondo7.jpg);
+      position: relative;
+      box-shadow: 4px 4px 5px black;
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+    }
+
+    nav ul li {
+      display: table-cell;
+
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+
+    }
+
+    /* Submenu */
+
+    nav ul li:hover ul {
+      display: block;
+      height: 100%;
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+    }
+
+    nav ul li ul {
+      display: block;
+      position: absolute;
+      background: #353b48;
+      left: 0;
+      right: 0;
+      overflow: hidden;
+      height: 0%;
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+    }
+
+    nav ul li ul {
+      display: none;
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+    }
+
+    nav ul li a {
+      color: #fff;
+      display: block;
+      line-height: 20px;
+      padding: 20px;
+      position: relative;
+      text-align: center;
+      text-decoration: none;
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+
+    }
+
+    .contenido {
+      height: 800px;
+
+    }
+
+    .section {
+      width: 400px;
+      height: 500px;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 10px;
+      float: left;
+
+    }
+
+    .aside {
+      width: 100%;
+      height: 140%;
+      background: #16a085;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 10px;
+      float: right;
+      box-shadow: 2px 2px 3px black;
+      -webkit-transition: all .5s ease-in-out;
+      -moz-transition: all .5s ease-in-out;
+      -o-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+    }
+
+    .aside2 {
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+      margin: 10px;
+      background: #16a085;
+      border-radius: 20px;
+      -webkit-transition: all .5s ease-in-out;
+      -moz-transition: all .5s ease-in-out;
+      -o-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+    }
+
+    .aside3 {
+      width: 60%;
+      height: 130%;
+      background: #fff;
+      -webkit-transition: all .5s ease-in-out;
+      -moz-transition: all .5s ease-in-out;
+      -o-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+    }
+
+    .Article {
+      height: 100%;
+      width: 135%;
+      background: #A3CB38;
+      box-shadow: 2px 2px 3px black;
+      margin: 5px;
+      padding: 5px;
+      border-radius: 10px;
+      -webkit-transition: all .5s ease-in-out;
+      -moz-transition: all .5s ease-in-out;
+      -o-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+
+    }
+
+    .complemento {
+      width: 600px;
+      height: 750px;
+      background: #fff;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 10px;
+      float: right;
+
+    }
+
+    .Article:hover {
+      background: #009b9b;
+      transform: scale(10, 10);
+      -webkit-transform: scale(1, 1) translate(7px, 7px);
+      /** Safari & Chrome **/
+      -o-transform: scale(1.2, 1.2) translateX(-10px, 10px);
+      /** Opera **/
+      -moz-transform: scale(1.2, 1.2) translateX(-10px, 10px);
+      /** Firefox **/
+      border-radius: 20Px;
+      box-shadow: 4px 4px 7px #000000;
+
+    }
+
+    .aside:hover {
+      background: #badc58;
+      transform: scale(10, 10);
+      -webkit-transform: scale(1, 1) translate(7px, 7px);
+      /** Safari & Chrome **/
+      -o-transform: scale(1.2, 1.2) translateX(-10px, 10px);
+      /** Opera **/
+      -moz-transform: scale(1.2, 1.2) translateX(-10px, 10px);
+      /** Firefox **/
+      border-radius: 20px;
+      box-shadow: 4px 4px 7px #000000;
+    }
+
+    .aside2:hover {
+      background: #badc58;
+      transform: scale(10, 10);
+      -webkit-transform: scale(1, 1) translate(7px, 7px);
+      /** Safari & Chrome **/
+      -o-transform: scale(1.2, 1.2) translateX(-10px, 10px);
+      /** Opera **/
+      -moz-transform: scale(1.2, 1.2) translateX(-10px, 10px);
+      /** Firefox **/
+      border-radius: 20Px;
+      box-shadow: 4px 4px 7px #000000;
+    }
+
+    /* Imagenes */
+
+    .imagen {
+      background-attachment: fixed;
+      -webkit-transition: all .5s ease-in-out;
+      -moz-transition: all .5s ease-in-out;
+      -o-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+    }
+
+    .active {
+      background: #037E8C;
+      font-weight: bold;
+    }
+
+    .acerca {
+      position: fixed;
+      bottom: 0px;
+      right: 0px;
+      background: #cc8e35;
+      height: 70px;
+      width: 195px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: fuente;
+      font-size: 28px;
+      box-shadow: 3px 3px 5px black;
+      border-radius: 20px;
+
+    }
+
+    .acerca:hover {
+      background: #ffb142;
+      -webkit-transition: all .5s ease-in-out;
+      -moz-transition: all .5s ease-in-out;
+      -o-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+    }
+
+    body::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    body::-webkit-scrollbar-thumb {
+      background: #27ae60;
+      border-radius: 5px;
+    }
+
+    body::-webkit-scrollbar-track {
+      background: #353b48;
+    }
+
+    body::-webkit-scrollbar-thumb:hover {
+      background: #2ecc71;
+    }
+  </style>
+
+</head>
+<!--Menu principal en html -->
+
+<body>
+  <span class="acerca">
+    <a href="AcercadeNosotros.html">Acerca de Nosotros</a>
+  </span>
+  <div class="contenedor">
+    <header></header>
+    <nav class="menu">
+      <ul>
+        <li>
+          <a class="active" href="index.html">
+            <span></span>Inicio</a>
+        </li>
+        <li>
+          <a href="Ecosistema.html">
+            <span></span>Ecosistema</a>
+          <ul>
+            <li>
+              <a href="Ecosistema-Acuatico.html">
+                <span></span>Ecosistema Acuatico</a>
+            </li>
+
+            <li>
+              <a href="Ecosistema-Terrestre.html">
+                <span></span>Ecosistema Terrestre</a>
+            </li>
+
+            <li>
+              <a href="Ecosistema_Fragmentado.html">
+                <span></span>Ecosistema Fragmentado</a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="Biodiversidad.html">
+            <span></span>Diversidad</a>
+
+          <ul>
+            <li>
+              <a href="Biodiversidad_Genetica.html">
+                <span></span>Diversidad genetica</a>
+            </li>
+
+            <li>
+              <a href="Biodiversidad_Organica.html">
+                <span></span>Diversidad Organica</a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="sustentabilidad.html">
+            <span></span>Sustentabilidad</a>
+          <ul>
+            <li>
+              <a href="sustentabilidad_Economica.html">
+                <span></span>Sustentabilidad Economica</a>
+            </li>
+            <li>
+              <a href="sustentabilidad_Social.html">
+                <span></span>Sustentabilidad Social</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="Factores_Ambientales.html">
+            <span></span>Factores ambientales</a>
+          <ul>
+            <li>
+              <a href="factoes_bioticos.html">
+                <span></span>Factores Bioticos</a>
+            </li>
+
+            <li>
+              <a href="factores_abioticos.html">
+                <span></span>Factores Abioticos</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div>
+      <h2 align="center" class="frase">La naturaleza está a menudo escondida, a veces dominada, raramente extinguida.</h2>
+      <h2 align="center" class="frase">Francis Bacon.</h2>
+      <img class="imagen" src="img/wallhaven-582750.jpg" width="100%" height="100%">
+    </div>
+    <div class="contenido">
+      <div class="seccion">
+        <table>
+          <thead>
+            <tr>
+              <th>
+                <h1 align="justify" class="frase">Datos curiosos</h1>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="Article" class="seccion">Lloramos 61 litros de lágrimas en toda la larga vida.
+                  <br> #LaHuellaEcológica</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="Article" class="seccion">Cuando eramos bebes usábamos 3800 pañales y se degradan en 500 años.
+                  <br> #LaHuellaEcologica </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="Article" class="seccion">Para tener energía toda la vida necesitamos alrededor de 4273 barras de pan.
+                  <br> #LaHuellaEcologica </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="Article" class="seccion">Para toda nuestra vida 7.173 litros será todas las veces que nos bañemos, gastaremos 100.000 litros de agua
+                  <br>#LaHuellaEcologica </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="Article" class="seccion">En toda la vida leeremos 533 libros en toda la vida
+                  <br> #LaHuellaEcológica</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="Article" class="seccion">Conocerás y ser amigo de 1700 personas en toda tu vida.
+                  <br> #LaHuellaEcológica</div>
+              </td>
+            </tr>
+      </div>
+      </tbody>
+      </table>
+
+      <table>
+        <thead>
+          <tr>
+            <th>
+              <h1 align="justify" class="frase">Ecologia 🌳</h1>
+            </th>
+        </thead>
+        <tbody>
+          </tr>
+          <td>
+            <div class="aside">
+              <p align="justify" class="seccion">
+
+                La ecología es una rama de la biología que estudia las relaciones entre los seres vivos, su ambiente, la distribución, la
+                abundancia, y cómo esas propiedades son afectadas por la interacción entre los organismos y el medio ambiente
+                en el que viven (hábitat), así como la influencia que cada uno de los seres vivos tiene sobre el medio ambiente.
+                La palabra Ökologie se deriva de la unión de las palabras griegas oikos, que significa casa, hogar, vivienda,
+                y logos, que significa estudio, tratado. Así, ecología significa el estudio del hogar. Esta palabra fue creada
+                por el científico alemán Ernst Haeckel en 1869 para designar la ciencia que estudia las relaciones entre
+                los seres vivos y el medio ambiente. Al principio era un término científico de uso restringido, y cayó en
+                el lenguaje común en la década de 1960, con los movimientos de carácter ambientalista.El concepto de ecología
+                humana se refiere al estudio científico de las relaciones entre los seres humanos y el medio ambiente, incluyendo
+                las condiciones naturales, las interacciones y los aspectos económicos, psicológicos, sociales y culturales.
+                La ecología es importante porque preserva y conserva el ambiente natural de las diferentes especies teniendo
+                en cuenta las relaciones entre el ser humano y la biosfera.En ecología, se estudian los procesos, la dinámica
+                y las interacciones entre todos los seres vivos de una población, de una comunidad, de un ecosistema o de
+                la biosfera. Las interacciones ecológicas se caracterizan por el beneficio de dos seres vivos (armónicas)
+                o por el perjuicio de uno de ellos (inarmónicas), y puede ocurrir entre seres de la misma especie (intraespecíficas)
+                o de diferentes especies (interespecíficas).
+                <br>Las principales ramas de estudio y de investigación en las que se divide la ecología son:
+                <ul class="seccion">
+                  <li type="disc" class="seccion">Relaciones intraespecíficas armónicas: la sociedad (organización de individuos de la misma especie) y la
+                    colonia (grupo de individuos de la misma especie con diferentes grados de dependencia entre sí).
+                  </li>
+
+                  <li type="disc" class="seccion">Relaciones intraespecíficas inarmónicas: el canibalismo y las competiciones intra- e interespecíficas (selección
+                    natural). Son relaciones entre especies iguales, pero hay un perjuicio en al menos uno de los lados.
+                  </li>
+
+                  <li type="disc" class="seccion">Relaciones interespecíficas armónicas: el mutualismo (o simbiosis), la protocooperación, el inquilinismo
+                    (o epibiosis) y el comensalismo. </li>
+
+                  <li type="disc" class="seccion">Relaciones interespecíficas inarmónicas: el amensalismo (o antibiosis), el herbivorismo, la depredación,
+                    el parasitismo y la esclavitud (o esclavagismo) intra- e interespecífica.</li>
+
+                  <li type="disc" class="seccion"> Autoecología, Demoecología (Dinámica de la población)</li>
+
+                  <li type="disc" class="seccion"> Sinecología (Ecología comunitaria)</li>
+
+                  <li type="disc" class="seccion"> Agroecología, Ecofisiología (Ecología Ambiental) y Macroecología.</li>
+          </td>
+          </div>
+        </tbody>
+      </table>
+
+      <div>
+        <img class="imagen" src="img/greenpeace-logo-png-transparent.png" alt="Organizacion del Cuidado del Medio Ambiente" width="100%"
+          height="100%">
+      </div>
+
+      <table cellspacing="20px">
+        <tr>
+          <th>
+            <h1 align="center" class="frase"> Que es Greenpeace?¿</h1>
+          </th>
+          <th>
+            <h1 class="frase" align="center">Quienes somos?¿</h1>
+          </th>
+        </tr>
+
+        <tr>
+
+          <td>
+            <div class="aside2">
+              <p align="justify" class="seccion">
+                <p align="center" class="seccion">Una de las principales organizaciones de la
+                  <a href="https://es.wikipedia.org/wiki/Ecolog%C3%ADa
+                ">Ecologia</a>,
+                  <a href="https://es.wikipedia.org/wiki/Biolog%C3%ADa ">Biologia</a>,
+                  <a href="https://es.wikipedia.org/wiki/Ciencias_naturales ">Ciencias Naturales</a>, esta organizacion se ocupa de cuidar al medio ambiente en su barco Esperanza lu
+                  logo es un ave con arcoiris.
+                  <img class="imagen" src="img/barco.jpg"> </p>
+              </p>
+            </div>
+          </td>
+
+
+          <td>
+            <div class="aside2">
+              <P class="seccion" aling="justify">
+                <p align="justify " class="seccion">Greenpeace es la organización ambientalista más reconocida, decidida y audaz en la defensa del medio ambiente
+                  en el mundo. Greenpeace se mantiene exclusivamente de donaciones de personas físicas que quieren un cambio
+                  para tener un planeta verde, pacífico y sin desigualdad. Es decir, Greenpeace no recibe dinero de gobiernos,
+                  empresas, iglesias ni partidos políticos. Gracias a este principio, nuestra organización es independiente
+                  en lo económico y lo político. La autosuficiencia económica permite a Greenpeace cuestionar, actuar, proponer
+                  y ponerle nombre y apellido a quienes destruyen el medio ambiente y a quienes pueden revertir esta situación.
+                  Para cuidar nuestro planeta realizamos acciones directas no violentas y de resistencia civil pacífica,
+                  con las cuales denunciamos los delitos ambientales y a quienes los cometen, generamos conciencia, informamos
+                  e inspiramos a la ciudadanía a participar en la búsqueda de soluciones. En pocas palabras, Greenpeace es
+                  una organización de la gente, que busca incidir en políticas públicas, involucrar e inspirar cambios y
+                  por la que constantemente transitan voluntarios, socios, activistas y ciberactivistas. En el mundo, Greenpeace
+                  tiene 43 oficinas. En 2008 abrió las más reciente en África.</p>
+              </P>
+            </div>
+          </td>
+
+      </table>
+      <table cellspacing="20px">
+        <tr>
+          <th>
+            <h1 align="center" class="frase">Misión 🐾</h1>
+          </th>
+          <th>
+            <h1 class="frase" align="center">Visión 🦅</h1>
+          </th>
+        </tr>
+
+        <tr>
+
+          <td>
+            <div class="aside2">
+              <p align="justify" class="seccion">
+                <p align="center" class="seccion">Propiciar un cambio en las políticas públicas y corporativas para una aplicación social y responsable de
+                  soluciones, inspirando y contribuyendo el fortalecimiento de un activo y plural movimiento ciudadano, en
+                  el marco de un nuevo modelo de consumo y producción hacia un mundo libre de amenazas al medio ambiente
+                  donde los efectos del cambio climático se vean reducidos y mitigados.</p>
+              </p>
+            </div>
+          </td>
+
+
+          <td>
+            <div class="aside2">
+              <P class="seccion" aling="justify">
+                <p align="justify " class="seccion">Incrementar y consolidar nuestra presencia territorial a través del desarrollo de campañas que atiendan la
+                  dimensión global desde lo local, apoyados en un fuerte contingente de socios, voluntarios, ciberactivistas
+                  y grupos locales actuando en torno a las prioridades, acciones y propuestas que desean alcanzar en defensa
+                  del medio ambiente siendo así un factor clave en la lucha contra el cambio climático.</p>
+              </P>
+            </div>
+          </td>
+
+      </table>
+
+
+      <table cellspacing="120px">
+        <tr>
+          <th>
+            <h1 align="center" class="frase">Organizaciones ambientalistas</h1>
+          </th>
+          <th>
+            <h1 class="frase" align="center">Organizaciones en contra del ambiente</h1>
+          </th>
+        </tr>
+
+        <tr>
+
+          <td>
+            <div class="aside3">
+              <p align="justify" class="seccion">
+                <img class="imagen " src="img/organizaciones.jpg " width="300px">
+                <img class="imagen " src="img/organizaciones 2.jpg " width="300px">
+                <img class="imagen " src="img/1200px-Logotipo_de_Comisiones_Obreras.jpg " width="300px">
+                <img class="imagen " src="img/organizaciones 3jpg.png " width="300px">
+                <img class="imagen " src="img/organizaciones 4.jpg" width="300px">
+              </p>
+            </div>
+          </td>
+
+
+          <td>
+            <div class="aside3">
+              <P class="seccion" aling="justify">
+                <img class="imagen " src="img/bayer.png" width="300px">
+                <img class="imagen " src="img/monsanto.png " width="300px">
+                <img class="imagen " src="img/syngenta.png" width="300px">
+                <img class="imagen " src="img/BASF.png " width="300px">
+                <img class="imagen " src="img/Dow.png " width="300px">
+              </P>
+            </div>
+          </td>
+
+      </table>
+
+
+      <table cellspacing="20px">
+        <tr>
+          <th>
+            <h1 align="center" class="frase">Historia de la Ecologia</h1>
+          </th>
+          <th>
+            <h1 aling="center" class="frase">Pieoneros</h1>
+          </th>
+
+        </tr>
+
+        <tr>
+
+          <td>
+            <div class="aside2">
+              <p align="justify" class="seccion">
+                La historia de la ecología es bastante reciente, no tiene ni siquiera 200 años de antigüedad. La historia de la ecología
+                nos remonta al siglo XIX, y más específicamente al año 1869, año en el cual el alemán Ernst Haeckel introdujo
+                el término Ökologie, el cual deriva del griego oikos (hogar, casa) y logos (estudio), entendiéndose por ecología
+                el “estudio del hogar” y de un mejor modo para gestionarlo. Si vamos a una definición formación formal, la
+                historia de la ecología nos dice que Haeckel entendía por ecología “una ciencia que estudia la relación de
+                los seres vivos con el ambiente que los rodea”, aunque luego la definición fue ampliada por algo así como
+                “el estudio de las características del medio”, dentro de lo cual se ocupaban importantes términos como materia,
+                energía la biocenosis. Actualmente, el señor Haeckel es considerado el padre de la ecología y por supuesto
+                el fundador del término, aunque la historia de la ecología se remota a la antigua grecia en realidad, veamos
+                un breve resumen de como comenzó todo. Desde tiempos inmemoriales, el hombre siempre se ha visto interesado
+                en conocer el medio que lo rodea, las extrañas y poderosas fuerzas de la naturaleza, los diferentes animales
+                y especies de plantas que habitan junto a él. Los inicios de la ecología se crearon allí, con las primeras
+                tribus del mundo, que dependían 100% de su entorno natural para lograr sobrevivir. Ellos cazaban, recolectaban
+                frutos, pescaban, entre otras cosas. Y para hacer todo esto, necesitaban conocer los animales, plantas y
+                el medio que los rodeaba. Más tarde también a medida que la raza humana avanzaba, desarrollaron la agricultura,
+                así como la ganadería, tareas que llevaron a que el hombre tuviera que aprender cada vez más sobre los animales,
+                plantas, el clima, entre muchas otras cosas. Sin embargo, esto no puede considerarse ecología, sino una mera
+                necesidad de comprender y conocer el mundo que los rodeaba en la antiguedad. Los primeros estudios ecológicos
+                surgieron sobre 325 a 285 A.C, cuando el filósofo Teofrastro comenzó a estudiar la forma en que diferentes
+                organismos vivos interactuaban con sus medios. Más tarde, ya en la época de la Revolución Industrial de comienzos
+                de 1800, Lamarck comenzó a hacer un claro relacionamiento entre los organismos y sus mecanismos de supervivencia
+                de acuerdo a la adaptación que tenían en el ambiente cambiante donde vivían. St. George Jackson más tarde,
+                sobre 1811 fue el primero en utilizar la palabra “Hexicologia“. La cual definía lo que hoy sería el estudio
+                entre los organismos y su medio, teniendo en cuenta importantes factores como naturaleza del lugar donde
+                viven, temperaturas promedio, iluminación del ambiente, así como la interacción que tenían con otros organismos
+                del ambiente. Siguiendo con el estudio de los organismos, Mendel posteriormente observó que las características
+                que eran heredadas no se mezclaban en los organismos, sino que permanecían totalmente distintas. Esta observación
+                y descubrimiento dió pie a que luego se observara como algunos organismos lograban sobrevivir, adaptarse
+                y resistir los cambios, mientras que otros no evolucionaban tanto, o perecían en el intento. Darwin, el famoso
+                naturalista británico propuso más tarde su “selección natural“, según la cual ciertos organismos logran tener
+                mejores habilidades (evolución) que otros para sobrevivir y reproducirse posteriormente. Isidoro Geoffrey
+                más adelante fue el encargado de acuñar el término “Etologia”, definiendo así el estudio de las relaciones
+                de cada organismo en la familia y la sociedad en que habitan. Fue un paso más para llegar a la moderna definición
+                de ecología que conocemos hoy. Todavía no se sabe a ciencia cierta si fue Henry Walter Bates quien usó la
+                palabra “Ecología”, o si fue Ernst Haeckal en 1870 quien comenzó a usar este término para referirse al estudio
+                de los organismos y su medio ambiente. Lo que si sabemos, es que la historia y definición de la palabra ecología
+                cambiaron muchísimo desde aquel entonces. Luego de comenzada la revolución industrial también se comenzó
+                a notar como las industrias y la mano del hombre afectaban al medio ambiente de forma significativa, comenzaron
+                las contaminaciones masivas en ríos, suelos y el aire. Más adelante se trasladó toda esta revolución a la
+                industria automovilística, con la invención del coche moderno por Henry Ford, quien se propuso llevarlo en
+                masa a cada lugar del mundo, cosa que logró. Con ello aumentó aún más la emisión de CO2, y la contaminación
+                tal como la conocemos hoy en día. Desde la década de 1950 y 1960 recién se ha comenzado a considerar a la
+                Ecología como una de las ciencias más fundamentales del mundo moderno, esto es debido a la masiva destrucción
+                y daño que realiza el ser humano en su medio de vida. El incremento en la contaminación, la super población
+                humana, y como esto afecta al planeta tierra han dado a la ecología moderna un gran protagonismo, algo que
+                la hace presente en casi todos los lugares. Desde ese entonces, el reciclaje, así como el desarrollo sostenible
+                y el favorecimiento del uso de energías renovables son cosas que se han vuelto cada vez más comunes en nuestras
+                vidas.
+
+              </p>
+            </div>
+          </td>
+
+          <td>
+            <div class="aside3">
+              <p align="justify" class="seccion">
+
+                <p aling="center" class="frase">
+                  <a href="https://es.wikipedia.org/wiki/Ernst_Haeckel">Ernst Haeckel</a>
+                  <img class="imagen" src="img/pionero.jpg" width="400px" height="500px">
+                  <p align="center" class="frase">
+                    <a href="https://es.wikipedia.org/wiki/Charles_Darwin">Charles Darwin</a>
+                    <img class="imagen" src="img/Pionero 2.jpg" width="400px" height="500px">
+                  </p>
+
+                </p>
+            </div>
+          </td>
+
+      </table>
+      <video src="videos/El día en que salvamos la Tierra.mp4
+                  " autobuffer autoloop loop controls poster="/images/video.png " width="100% "></video>
+      <br>
+      <p align="center" class="seccion">Corpyrigth &#169 Derechos de autor MiKe and ZaiKo 2018</p>
+    </div>
+  </div>
+</body>
+
+</html>

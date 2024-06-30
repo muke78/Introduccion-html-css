@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ecosistema Fragmentado</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="MobileOptimized" content="width" />
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="img/logo.png">
+</head>
+
+<body>
+  <!-- Libreria de Java Script -->
+
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!--Java Script Movimiento de Menu -->
+
+  <script type="text/javascript">
+
+    $(document).ready(function () {
+      var altura = $('.menu').offset().top;
+
+      $(window).on('scroll', function () {
+        if ($(window).scrollTop() > altura) {
+          $('.menu').addClass('menu-fixed');
+        } else {
+          $('.menu').removeClass('menu-fixed');
+        }
+      });
+
+    });
+  </script>
+  <!-- Esstilos css -->
+
+  <style type="text/css">
+    * {
+      margin: 5px;
+      padding: 5px;
+    }
+
+
+    /*Editacion de hipervinculos */
+
+    a:link {
+      text-decoration: none
+    }
+
+    a:visited {
+      text-decoration: none;
+    }
+
+    a:active {
+      text-decoration: none
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    a:link {
+      text-decoration: none;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+      background-color: transparent;
+      -webkit-text-decoration-skip: objects;
+    }
+
+
+    /* Seleccion de texto color  */
+
+    ::selection {
+      background-color: #BE712D;
+      color: #ffffff;
+    }
+
+
+
+    /* Termina seleccion de texto de color */
+
+    .contenedor {
+      width: 100%;
+      height: 100px;
+      margin: auto;
+
+
+
+    }
+
+    /* Empieza header imagen */
+
+    header {
+      height: 200px;
+      width: 100%;
+      background: url(img/Ecosistema_Fragmentado.jpg);
+      background-size: 90%;
+
+      background-repeat: no-repeat;
+      -webkit-transition: all .5s ease-in-out;
+      -moz-transition: all .5s ease-in-out;
+      -o-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+
+    }
+
+    header:hover {
+      background: url(img/Ecosistema_Fragmentado2.jpg);
+      background-repeat: no-repeat;
+      background-size: 90%;
+      background-position: center;
+
+      transform: translate(-320px, 0);
+      -webkit-transform: translate(-320px, 0);
+      /** Safari & Chrome **/
+      -o-transform: translate(-320px, 0);
+      /** Opera **/
+      -moz-transform: translate(-320px, 0);
+      /** Firefox **/
+    }
+
+
+
+
+
+    nav {
+      margin: 20px auto;
+      max-width: 1000px;
+      width: 90%;
+
+    }
+
+    /* COlores aleatorios en menu */
+
+    nav ul li a:hover {
+      animation: color 3s;
+      animation-iteration-count: infinite;
+      transform: scale(1.2, 1.2);
+      box-shadow: 4px 3px 7px #353b48;
+
+    }
+
+
+    @keyframes color {
+      0% {
+        background: #ff7f50;
+      }
+      25% {
+        background: #ff6348;
+      }
+      50% {
+        background: #2ed573;
+      }
+      75% {
+        background: #7bed9f;
+      }
+      100% {
+        background: transparent;
+      }
+    }
+
+    /* termina colores aleatorios del menu */
+
+    /* Fuentes personalizadas */
+
+    @font-face {
+      font-family: fuente;
+      src: url(font/fuente.otf);
+    }
+
+
+
+    @font-face {
+      font-family: mac;
+      src: url(font/escritura.ttf);
+    }
+
+    @font-face {
+      font-family: tema;
+      src: url(font/tema.ttf);
+    }
+
+    /* Termina fuentes personalizadas */
+
+    li {
+      font-family: fuente;
+      font-size: 25px;
+    }
+
+
+    .seccion {
+      font-family: tema;
+      font-size: 16px;
+    }
+
+
+    .frase {
+      font-family: mac;
+      font-size: 30px;
+      text-shadow: 3px 3px 7px #4FED5E;
+    }
+
+    /* Imagen de escala a grises */
+
+    .imagen:hover {
+      filter: saturate(300%);
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+    }
+
+
+    /* Menu desplegable jquery */
+
+    .menu-fixed {
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      max-width: 94.5%;
+      width: 94.5%;
+      -webkit-transition: all .5s ease-in-out;
+      -moz-transition: all .5s ease-in-out;
+      -o-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+
+    }
+
+
+    /* Estilos de Menu */
+
+    nav ul {
+      list-style: none;
+
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+
+    }
+
+
+    nav ul {
+      display: table;
+      /*overflow:hidden;*/
+      width: 100%;
+      background: url(img/acuatico.jpg);
+      position: relative;
+      box-shadow: 4px 4px 5px black;
+
+
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+    }
+
+
+    nav ul li {
+      display: table-cell;
+
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+
+    }
+
+    /* Submenu */
+
+    nav ul li:hover ul {
+      display: block;
+      height: 100%;
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+    }
+
+    nav ul li ul {
+      display: block;
+      position: absolute;
+      background: #353b48;
+      left: 0;
+      right: 0;
+      overflow: hidden;
+      height: 0%;
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+    }
+
+
+
+
+    nav ul li ul {
+      display: none;
+
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+    }
+
+    nav ul li a {
+      color: #fff;
+      display: block;
+      line-height: 20px;
+      padding: 20px;
+      position: relative;
+      text-align: center;
+      text-decoration: none;
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+
+    }
+
+
+    .contenido {
+      height: 550px;
+
+    }
+
+    .section {
+      width: 400px;
+      height: 500px;
+
+      padding: 10px;
+      margin: 10px;
+      border-radius: 10px;
+      float: left;
+
+    }
+
+
+    .aside {
+      width: 1005;
+      height: 100%;
+      background: #16a085;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 10px;
+      float: right;
+      box-shadow: 2px 2px 3px black;
+
+
+      float: left;
+    }
+
+
+    .Article {
+      height: 97px;
+      background: #A3CB38;
+      font-family: tema;
+      box-shadow: 2px 2px 3px black;
+      margin: 5px;
+      padding: 5px;
+      border-radius: 10px;
+
+
+    }
+
+    .complemento {
+      width: 600px;
+      height: 750px;
+      background: #fff;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 10px;
+      float: right;
+
+
+
+      float: left;
+    }
+
+
+
+    .Article:hover {
+      background: cyan;
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+    }
+
+    .aside:hover {
+      background: #badc58;
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+    }
+
+    /* Imagenes */
+
+    .imagen {
+      background-attachment: fixed;
+
+    }
+
+
+
+
+
+    .active {
+      background: #037E8C;
+      font-weight: bold;
+    }
+
+    .acerca {
+      position: fixed;
+      bottom: 0px;
+      right: 0px;
+      background: #cc8e35;
+      height: 70px;
+      width: 195px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: fuente;
+      font-size: 28px;
+      box-shadow: 3px 3px 5px black;
+
+      cursor: pointer;
+      border-radius: 20px;
+
+    }
+
+    .acerca:hover {
+      background: #ffb142;
+      -webkit-transition: all .5s ease-in-out;
+      -moz-transition: all .5s ease-in-out;
+      -o-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+    }
+
+    body::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    body::-webkit-scrollbar-thumb {
+      background: #27ae60;
+      border-radius: 5px;
+    }
+
+    body::-webkit-scrollbar-track {
+      background: #353b48;
+    }
+
+    body::-webkit-scrollbar-thumb:hover {
+      background: #2ecc71;
+    }
+  </style>
+
+  </head>
+
+  <!--Menu principal en html -->
+
+  <body>
+
+    <span class="acerca">
+      <a href="AcercadeNosotros.html">Acerca de Nosotros</a>
+    </span>
+
+    <div class="contenedor">
+      <header></header>
+      <nav class="menu">
+        <ul>
+
+
+          <li>
+            <a href="index.html">
+              <span></span>Inicio</a>
+          </li>
+
+          <li>
+            <a class="active" href="Ecosistema.html">
+              <span></span>Ecosistema</a>
+
+            <ul>
+
+              <li>
+                <a href="Ecosistema-Acuatico.html">
+                  <span></span>Ecosistema Acuatico</a>
+              </li>
+
+              <li>
+                <a href="Ecosistema-Terrestre.html">
+                  <span></span>Ecosistema Terrestre</a>
+              </li>
+
+              <li>
+                <a class="active" href="Ecosistema_Fragmentado.html">
+                  <span></span>Ecosistema Fragmentado</a>
+              </li>
+            </ul>
+
+
+          </li>
+
+          <li>
+            <a href="Biodiversidad.html">
+              <span></span>Diversidad</a>
+
+            <ul>
+              <li>
+                <a href="Biodiversidad_Genetica.html">
+                  <span></span>Bioversidad genetica</a>
+              </li>
+
+              <li>
+                <a href="Biodiversidad_Organica.html">
+                  <span></span>Bioversidad Organica</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="sustentabilidad.html">
+              <span></span>Sustentabilidad</a>
+
+
+            <ul>
+
+              <li>
+                <a href="sustentabilidad_Economica.html">
+                  <span></span>Sustentabilidad Economica</a>
+              </li>
+
+
+              <li>
+                <a href="sustentabilidad_Social.html">
+                  <span></span>Sustentabilidad Social</a>
+              </li>
+
+
+
+
+            </ul>
+
+
+
+          </li>
+
+          <li>
+            <a href="Factores_Ambientales.html">
+              <span></span>Factores ambientales</a>
+            <ul>
+              <li>
+                <a href="factoes_bioticos.html">
+                  <span></span>Factores Bioticos</a>
+              </li>
+
+              <li>
+                <a href="factores_abioticos.html">
+                  <span></span>Factores Abioticos</a>
+              </li>
+            </ul>
+          </li>
+
+
+
+
+        </ul>
+      </nav>
+      <div>
+        <h2 align="center" class="frase">Todo lo que le ocurra a la tierra, le ocurrirá a los hijos de la tierra
+        </h2>
+
+        <h2 align="center" class="frase">Jefe indio Seattle </h2>
+
+        <img class="imagen" src="img/fragmentado.jpg" width="100%" height="100%">
+
+      </div>
+
+      <table cellspacing="20px">
+        <tr>
+          <th>
+            <h1 align="center" class="frase">Que es??</h1>
+          </th>
+          <th>
+            <h1 class="frase" align="center">La pérdida del hábitat y el umbral de extinción</h1>
+          </th>
+        </tr>
+
+        <tr>
+
+          <td>
+            <div class="aside">
+              <p align="justify" class="seccion">
+                La fragmentación de hábitat es un proceso de cambios ambientales importante para la evolución y la biología de la conservación.
+                Usualmente es definida como aquel proceso en el cual una gran extensión de hábitat es transformada en un
+                número de parches más pequeños que se encuentran aislados entre sí por una matriz con propiedades diferentes
+                a la del hábitat original.​ El paisaje se fragmenta de forma progresiva, aumentando el contacto entre los
+                parches y la matriz. Dado que los límites entre ambos no son tajantes, en las regiones de contacto se establece
+                una transición denominada borde cuya extensión estará determinada principalmente por las propiedades de la
+                matriz. En consecuencia, la proporción de hábitat que permanece relativamente intacta es una función compleja
+                entre la forma y el tamaño de los parches, y la naturaleza de la matriz . No obstante, la fragmentación es
+                un proceso que trasciende la interacción parche-matriz, teniendo implicaciones a nivel ambiental. De hecho,
+                para que verdaderamente ocurra es necesario que exista discontinuidad en el paisaje , un atributo que obliga
+                a ampliar a escala regional el estudio del fenómeno.
+                <img src="img/fragmentado-imagen.jpg" width="300" height="200">
+              </p>
+            </div>
+          </td>
+
+          <td>
+            <div class="aside">
+              <P class="seccion" aling="justify">
+                Generalmente el efecto más obvio del proceso de fragmentación es la pérdida de hábitat nativo. Esto ha llevado a muchos investigadores
+                a medir el grado de impacto simplemente como la cantidad de hábitat remanente en el paisaje, ignorando que
+                la fragmentación puede ocurrir de diversas maneras generando patrones espaciales muy diferentes. Lo cierto
+                es que la pérdida de hábitat siempre acompaña la fragmentación del paisaje y es por ello que los índices
+                de fragmentación se correlacionan fuertemente con la proporción de hábitat perdido, sin embargo son fenómenos
+                diferentes que deben ser discernidos .17​18​ De hecho la fragmentación per se genera impactos importantes
+                en la biodiversidad que son independientes de la pérdida del hábitat .19​18​ Para entender el proceso de
+                fragmentación del hábitat (que ocurre como consecuencia de la destrucción del mismo) y sus consecuencias
+                en las poblaciones, se obtuvieron mapas generados por modelos aleatorios que muestran que el tamaño y el
+                aislamiento de los parches no varían linealmente con respecto a la cantidad de hábitat perdido .6​20​14​
+                Esto determina que ciertas proporciones de hábitat destruido sean importantes umbrales, más allá de los cuales
+                se acelera la disminución del tamaño y el aumento del aislamiento de los parches, siendo las poblaciones
+                remanentes en los mismos inviables.
+                <img src="img/fragmentado-logo2.jpg" width="300px" height="200">
+
+              </P>
+            </div>
+          </td>
+
+      </table>
+
+      <table cellspacing="20px">
+        <tr>
+          <th>
+            <h1 align="center" class="frase">Que hacer??</h1>
+          </th>
+        </tr>
+
+        <tr>
+
+          <td>
+            <div class="aside">
+              <p align="justify" class="seccion">
+                Resulta injusto exigir que sólo las comunidades rurales se esfuercen en conservar la naturaleza. Para ello se requiere un
+                equilibrio en el bienestar social e igualdad entre las zonas urbanas y las zonas rurales. Se requiere dirigir
+                mayor presupuesto a programas basados en buenos diagnósticos y no sustentados sólo en clientelismo político.
+                ¿Cómo?, Comencemos por conservar la vegetación a orilla de ríos y arroyos y agilizar los apoyos económicos
+                a la reforestación. Durante años los campesinos han padecido de una burocracia brutal y de una serie de lineamientos
+                y requisitos, cuando de hecho, sus comunidades han estado aisladas, sin servicios básicos y sin medios de
+                comunicación. Los apoyos tendrían que ir a donde están dichas comunidades; los campesinos no tendrían que
+                venir a pedirlos. Las áreas naturales están “allá”, pues “allá” deberían estar las oficinas y los funcionarios
+                responsables. Considerando que estamos frente a un desastre natural, ¿acaso no deberíamos implementar verdaderos
+                programas de rescate económico y ecológico para los damnificados sociales y ecológicos? Tal como no bastaría
+                con sólo llevar programas de orientación ante una desgracia por inundación; tampoco basta con implementar
+                programas de educación ambiental. Urge atender a los damnificados en este desastre llamado deforestación
+                y fragmentación del ecosistema.
+                <img class="imagen" src="img/imagen4.jpg" width="400px" height="300px">
+                <img src="img/imgen5.jpg" width="400px" height="300px">
+              </p>
+            </div>
+          </td>
+      </table>
+
+      <table cellspacing="20px">
+        <tr>
+          <th>
+            <h1 align="center" class="frase">Impacto Ambiental</h1>
+          </th>
+        </tr>
+
+        <tr>
+
+          <td>
+            <div class="aside">
+              <p align="justify" class="seccion">
+
+                El impacto ambiental al medio natural es el efecto que produce la actividad humana sobre el medio ambiente. El concepto puede
+                extenderse a los efectos de un fenómeno natural catastrófico. Técnicamente, es la alteración en la línea
+                de base ambiental. La ecología es la ciencia que se encarga de medir este impacto y tratar de minimizarlo.
+                Las acciones de las personas sobre el medio ambiente siempre provocarán efectos colaterales sobre éste. La
+                preocupación por los impactos ambientales abarca varios tipos de acciones, como la contaminación de los mares
+                con petróleo, los desechos de la energía radioactiva o desechos radioactivos/nucleares, la contaminación
+                auditiva, la emisión de gases nocivos, o la pérdida de superficie de hábitats naturales, entre otros. La
+                evaluación de impacto ambiental (EIA) es un procedimiento por el que se identifican y evalúan los efectos
+                de ciertos proyectos sobre el medio físico y social. La Declaración de Impacto Ambiental (DIA) es el documento
+                oficial que emite el órgano ambiental al final del procedimiento de EIA, que resume los principales puntos
+                del mismo y concede o deniega la aprobación del proyecto desde el punto de vista ambiental. La identificación
+                y mitigación de impactos ambientales es el principal objetivo del procedimiento de Evaluación de Impacto
+                Ambiental. La aplicación de acciones de mitigación, siguiendo la denominada "jerarquía de mitigación", pretende
+                contrarrestar los efectos negativos de los proyectos sobre el medio ambiente.
+                <img src="img/Impacto ambiental.jpg" width="800px" height="400px">
+                <img src="img/Impacto ambiental2.jpg" width="800" height="400px">
+              </p>
+            </div>
+          </td>
+      </table>
+      <center>
+        <audio src="musica/m4.mp3" controls="controls" autoplay></audio>
+      </center>
+  </body>
+
+</html>

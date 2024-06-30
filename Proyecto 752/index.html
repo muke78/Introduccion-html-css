@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Proyecto 752</title>
+</head>
+
+<body>
+    <input type="checkbox" id="check">
+    <div id="header">
+        <div id="logo">
+            <h2>Artesanos del <span>Software</span></h2>
+        </div>
+        <!--Barra de Navegacion-->
+        <nav class="navegacion">
+            <a href="#" class="active">Inicio</a>
+            <a href="#">Galeria</a>
+            <a href="#">Canvas</a>
+            <a href="#">Chat</a>
+            <a href="#">Contacto</a>
+            <a href="#">Ubicacion</a>
+        </nav>
+        <label for="check">
+            <i class="fas fa-bars menu-btn"></i>
+            <i class="fas fa-times close-btn"></i>
+        </label>
+
+    </div>
+    <hr>
+    <div id="bie">
+        <div id="titu">
+            <h1>Porque programar es un <span>ARTE</span></h1>
+        </div>
+        <div class="ser">
+            <img src="IMG/ICO/videojuegos.png" alt="">
+            <h2>Videojuegos</h2>
+        </div>
+        <div class="ser">
+            <img src="IMG/ICO/ciencia.png" alt="">
+            <h2>Ciencia</h2>
+        </div>
+        <div class="ser">
+            <img src="IMG/ICO/desarrollo.png" alt="">
+            <h2>Desarrollo</h2>
+        </div>
+    </div>
+
+    <div id="middle">
+        <div id="titu">
+            <h2>Conocenos</h2>
+        </div>
+        <div class="mono2">
+            <img src="IMG/ICO/mono.jpg" alt="" class="mono">
+            <p class="paf">Nuestro CEO(Dr. Mono)</p>
+        </div>
+        <div class="mono2">
+            <video src="VIDEOS/bunsen.mp4" controls type="video/mp4"></video>
+            <p>Tu navegador no <br>soporta video nativo</p>
+        </div>
+        <br>
+        <div class="mono2">
+            <p>Nuestra historia</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="foo">
+            <h2>Siguenos</h2>
+            <a href="https://www.facebook.com/"><i class="uil uil-facebook-f"></i></a>
+            <a href="https://www.youtube.com/"><i class="uil uil-youtube"></i></a>
+            <a href="https://twitter.com/"><i class="uil uil-twitter-alt"></i></a>
+            <a href="https://github.com/"><i class="uil uil-github-alt"></i></a>
+        </div>
+
+        <div class="foo">
+            <form action="" method="post">
+                <h2>Suscribete</h2>
+                <span>Email</span>
+                <br>
+                <br>
+                <div class="footer-input-wrap">
+                    <input type="email" placeholder="Ingrese su correo" class="input" required>
+                    <button class="input-arrow" type="submit" id="btn">
+                        <i id="send" class="uil uil-message"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="foo">
+            <h2>Powered by:</h2>
+            <ul>
+                <li><a href="https://html.spec.whatwg.org/multipage/">HTML5</a></li>
+                <li><a href="https://nodejs.org/es/">Node JS</a></li>
+                <li><a href="https://mozilla.github.io/nunjucks/">Nunjucks</a></li>
+                <li><a href="https://github.com/">GitHub</a></li>
+                <li><a href="https://jquery.com/">JQuery</a></li>
+                <li><a href="https://www.redhat.com/es/technologies/cloud-computing/openshift">OpenShift</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+<!-- <script src="JS/main.js"></script> -->
+<script src="JS/jquery-1.10.2.min.js"></script>
+<script>
+    $(function () {
+        //Objeto el texto y la imagen
+        var btn = $("#btn-animate");
+        var btn2 = $("#btn-animate2");
+        var btn3 = $("#btn-animate3");
+        var img = $("img");
+        //Obtengo el contenedor sobre 
+        //el que se hara la animacion
+        var content = $("#content");
+        var content2 = $("#content2");
+        var content3 = $("#content3");
+
+        //Escucho el click del boton
+
+        btn.click(function () {
+                content.fadeOut("slow",
+                function () {
+                    if (img.attr("src", "IMG/ICO/videojuegos.png")) {
+                        img.attr("src", "IMG/ICO/desarrollo.png");
+                    } else {
+                        img.attr("src", "IMG/ICO/videojuegos.png");
+                    }
+                }
+            );
+        });
+
+        btn2.click(function () {
+                content2.fadeOut("slow",
+                function () {
+                    if (img.attr("src", "IMG/ICO/ciencia.png")) {
+                        img.attr("src", "IMG/ICO/videojuegos.png");
+                    } else {
+                        img.attr("src", "IMG/ICO/ciencia.png");
+                    }
+                }
+            );
+        });
+        btn3.click(function () {
+                content3.fadeOut("slow",
+                function () {
+                    if (img.attr("src", "IMG/ICO/desarrollo.png")) {
+                        img.attr("src", "IMG/ICO/ciencia.png");
+                    } else {
+                        img.attr("src", "IMG/ICO/ciencia.png");
+                    }
+                }
+            );
+        });
+    });
+
+</script>
+
+</html>

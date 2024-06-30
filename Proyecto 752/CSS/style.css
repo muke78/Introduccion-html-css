@@ -1,0 +1,386 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+#header {
+    padding: 2rem;
+    width: 100%;
+    background: #000;
+    background-size: cover;
+    background-position: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#header #logo {
+    color: white;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+#header #logo span {
+    color: #F2442B;
+    text-transform: uppercase;
+}
+
+#header nav {
+    color: 000;
+}
+
+#header nav a {
+    font: 1.4rem;
+    text-decoration: none;
+    padding: 0.6rem;
+    margin: 1rem;
+    text-align: center;
+    color: white;
+    transition: 0.2s;
+    transition-property: background;
+    border-radius: 2rem;
+    letter-spacing: 1px;
+}
+
+#header nav a:hover {
+    background: rgba(204, 83, 65, 1);
+}
+
+#header .navegacion>.active {
+    background: #F79F1F;
+}
+
+#bie {
+    padding: 2rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../IMG/giphy.gif);
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+#bie #titu {
+    width: 100%;
+    display: inline-block;
+    font-size: 45px;
+    color: transparent;
+    -webkit-text-stroke: 2px #fff;
+    background: url(../IMG/ICO/back.png);
+    background-size: cover;
+    -webkit-background-clip: text;
+    animation: back 5s both infinite;
+    text-align: center;
+    margin-top: 7rem;
+    margin-bottom: 3rem;
+}
+
+#bie #titu span {
+    -webkit-text-stroke: 3px #F2442B;
+}
+
+@keyframes back {
+    55% {
+        background-position: -2000px 0;
+    }
+
+    1% {
+        background-position: 1px 0;
+    }
+}
+
+#bie .ser {
+    margin: 50px;
+    display: inline-block;
+    text-align: center;
+    justify-content: center;
+    transition: 0.3s;
+    color: white;
+    transition: 0.3s;
+}
+
+#bie .ser img {
+    width: 100%;
+}
+
+#bie .ser:hover {
+    transform: translateY(-12px);
+}
+
+#middle {
+    width: 100%;
+    background: rgb(0, 0, 0);
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 1) 14%, rgba(255, 255, 255, 0) 27%, rgba(0, 0, 0, 1) 80%), url(../IMG/ICO/pintura-en-ondas_3840x2160_xtrafondos.com.jpg);
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+#middle #titu {
+    font-size: 50px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.mono2 {
+    display: inline-block;
+    padding: 50px;
+    margin-top: 2rem;
+}
+
+.mono2 img {
+    width: 500px;
+    border-radius: 0.5rem;
+}
+
+.mono2 video {
+    width: 500px;
+    border-radius: 0.5rem;
+}
+
+
+footer {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 1), 15%, rgba(160, 49, 49, 0)57%, rgba(0, 0, 0, 2) 94%), url(../IMG/giphy3.gif);
+    background-size: cover;
+    text-align: center;
+}
+
+.foo {
+    padding: 2rem;
+    display: inline-table;
+    width: 500px;
+}
+
+.foo h2 {
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.foo span {
+    font-size: 20px;
+    color: #F2442B;
+}
+
+.foo .input {
+    outline: none;
+    border: none;
+    width: 370px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.footer-input-wrap {
+    display: flex;
+    grid-template-columns: auto 50px;
+    width: 100%;
+    height: 45px;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-top: 1.2rem;
+}
+
+.input-arrow {
+    width: 60px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #F2442B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 20px 20px 0px;
+    font-size: 2rem;
+    transition: 0.3s;
+}
+
+.input-arrow:hover {
+    background-color: #eb624d;
+}
+
+.foo li {
+    list-style: none;
+    margin-bottom: 0.5rem;
+}
+
+.foo li a {
+    font-size: 1.2rem;
+    color: #F2442B;
+    text-decoration: none;
+}
+
+.foo i {
+    font-size: 40px;
+    color: #F2442B;
+    padding: 0.5rem;
+    width: 5rem;
+    transition: 0.3s;
+}
+
+#send {
+    color: #ffff;
+}
+
+label {
+    display: none;
+}
+
+#check {
+    z-index: 3;
+    display: none;
+}
+
+@media (max-width:1200px) {
+    #header .navegacion {
+        display: none;
+    }
+
+    label {
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+        transition: 0.3s;
+        transition-property: color;
+        color: #fff;
+    }
+
+    label .close-btn {
+        display: none;
+    }
+
+    #check:checked~#header .navegacion {
+        z-index: 2;
+        position: fixed;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../IMG/giphy.gif);
+        background-size: cover;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #check:checked~#header .navegacion a {
+        font-weight: 700;
+        margin-right: 0;
+        margin-bottom: 50px;
+        letter-spacing: 2px;
+    }
+
+    #check:checked~#header label .menu-btn {
+        display: none;
+    }
+
+    #check:checked~#header label .close-btn {
+        z-index: 2;
+        display: block;
+        position: fixed;
+    }
+
+    label .menu-btn {
+        position: absolute;
+    }
+
+    #header #logo {
+        position: relative;
+        bottom: -6px;
+    }
+
+    #titu h1 {
+        font-size: 50px;
+        line-height: 50px;
+    }
+
+    #middle p {
+        font-size: 1em;
+    }
+
+    #titulo {
+        font-size: 2.5em;
+        line-height: 30px;
+    }
+
+    #middle #titu {
+        font-size: 30px;
+    }
+
+    .mono2 {
+        margin-bottom: 0rem;
+        padding: 10px;
+    }
+
+    .mono2 img {
+        width: 170px;
+    }
+
+    .mono2 video {
+        width: 170px;
+    }
+
+    .ser img {
+        width: 120px;
+    }
+
+    .foo {
+        padding: 0.5rem;
+        display: inline-table;
+        width: 250px;
+    }
+}
+
+@media (max-width:450px) {
+    #header #logo {
+        font-size: 1rem;
+    }
+
+    #bie #titu h1 {
+        font-size: 35px;
+    }
+
+    #bie .ser {
+        margin: 10px;
+        width: 110px;
+    }
+
+    #middle #titu {
+        font-size: 20px;
+    }
+
+    .foo {
+        width: 150px;
+    }
+
+    .foo .input {
+        width: 150px;
+    }
+
+    .foo .btn {
+        width: 125px;
+        height: 40px;
+    }
+}
+
+body::-webkit-scrollbar {
+    width: 7px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #F2442B;
+    border-radius: 80px 5px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #2d3436;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #eb624d;
+}

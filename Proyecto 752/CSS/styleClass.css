@@ -1,0 +1,104 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*definiendo selectores de etiqueta*/
+
+header, footer {
+    background: #3b2f63;
+}
+
+h2 {
+    /* color de fuente del encabexa principal */
+    color: #fff;
+}
+
+nav, footer, a {
+    color: #c7c0de;
+    text-decoration: none;
+}
+
+#bienvenida {
+    background-image: url(../IMG/ICO/portada.jpg);
+    background-repeat: no-repeat;
+    line-height: 600px;
+    /* imagen cubre toda la caja */
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+/* definiendo selectores de clase */
+
+.servicios {
+    display: inline-block;
+    width: 20%;
+}
+
+.section-img {
+    background-image: url(../IMG/ICO/fondo.png);
+    background-attachment: fixed;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.mono2 {
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+}
+
+.sec-con {
+    background: #c7c0de;
+    color: #3b2f63;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#siguenos {
+    display: inline-block;
+    width: 25%;
+    vertical-align: top;
+}
+
+#suscribir {
+    display: inline-block;
+    width: 25%;
+    vertical-align: top;
+}
+
+#powered {
+    display: inline-block;
+    width: 10%;
+    vertical-align: top;
+}
+
+#powered ul {
+    list-style: none;
+}
+
+/* definiendo formatio para el titulo y el menu de navegacion */
+
+#titu{
+    display: inline-block;
+    width:35%;
+    vertical-align: top;
+    font-size: 0.8em;
+}
+
+.navegacion {
+    display: inline-block;
+    width: 55%;
+}
+
+.navegacion a {
+    display: inline-block;
+    width: 15%;
+}
+
+img video {
+    /* solo se usa para imagenes y videos */
+    max-width: 100%;
+}

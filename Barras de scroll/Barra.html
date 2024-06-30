@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <title>Barras personalizadas</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: #f2f2f2;
+        font-family: 'Oswald', sans-serif;
+    }
+
+    .contenedor {
+        width: 500px;
+        height: 500px;
+        margin: 50px auto;
+        padding: 20px;
+        background: #fff;
+        overflow: auto;
+        font-family: 'Open Sans';
+        border-radius: 4px;
+    }
+
+    .contenedor h1 {
+        font-size: 38px;
+        font-weight: 600;
+        color: #000;
+    }
+
+    .contenedor hr {
+        background:#e84393 ;
+        width: 20%;
+        height: 5px;
+        border: none;
+        margin: 20px 0;
+        border-radius: 50px;
+    }
+
+    p {
+        margin-bottom: 20px;
+        line-height: 28px;
+        font-size: 16px;
+        color: #414141;
+    }
+
+    .contenedor hr:hover{
+        background: #fd79a8
+
+    }
+
+    .contenedor::-webkit-scrollbar {
+        width: 7px;
+        
+    }
+    .contenedor::-webkit-scrollbar-thumb{
+        background:#fd79a8;
+        border-radius:10px;
+    }
+    .contenedor::-webkit-scrollbar-track{
+        background:#414141;
+}
+
+    .contenedor::-webkit-scrollbar-thumb:hover{
+        background: #e84393;
+    }
+    /*---.contenedor::-webkit-scrollbar-track-piece{
+        background:darkgreen;
+    }---*/
+</style>
+
+<body>
+    <div class="contenedor">
+        <h1>Barra se Scroll Personalizada</h1>
+        <hr>
+        <p align="justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur ex officia excepturi, porro fugiat quisquam,
+            ipsa ad dolor doloremque dicta dignissimos accusamus nobis quia eveniet, a sit odit quo architecto.</p>
+        <p align="justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quo sapiente saepe hic id soluta deserunt dolorem
+            cupiditate accusantium! Nihil reiciendis illo repudiandae sint harum recusandae ipsum, a ipsa. Explicabo.</p>
+        <p align="justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos architecto quae culpa illum quasi numquam incidunt.
+            Accusantium nihil cum, possimus harum veritatis quibusdam accusamus nulla excepturi dolorem ratione, deleniti
+            totam?
+        </p>
+
+    </div>
+</body>
+
+</html>

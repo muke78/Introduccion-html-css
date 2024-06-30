@@ -1,0 +1,616 @@
+<!-- Empiezo de html -->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="MobileOptimized" content="width" />
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Sustentabilidad </title>
+
+
+
+  <!-- Libreria de Java Script -->
+
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!--Java Script Movimiento de Menu -->
+
+  <script type="text/javascript">
+
+    $(document).ready(function () {
+      var altura = $('.menu').offset().top;
+
+      $(window).on('scroll', function () {
+        if ($(window).scrollTop() > altura) {
+          $('.menu').addClass('menu-fixed');
+        } else {
+          $('.menu').removeClass('menu-fixed');
+        }
+      });
+
+
+
+    });
+  </script>
+  <!-- Esstilos css -->
+
+  <style type="text/css">
+    * {
+      margin: 5px;
+      padding: 5px;
+    }
+
+
+    /*Editacion de hipervinculos */
+
+    a:link {
+      text-decoration: none
+    }
+
+    a:visited {
+      text-decoration: none;
+    }
+
+    a:active {
+      text-decoration: none
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    a:link {
+      text-decoration: none;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+      background-color: transparent;
+      -webkit-text-decoration-skip: objects;
+    }
+
+
+    /* Seleccion de texto color  */
+
+    ::-moz-selection {
+      background-color: #BE712D;
+      color: #ffffff;
+    }
+
+
+
+    /* Termina seleccion de texto de color */
+
+    .contenedor {
+      width: 100%;
+      height: 100px;
+      margin: auto;
+
+
+
+    }
+
+    /* Empieza header imagen */
+
+    header {
+      height: 200px;
+      width: 100%;
+      background: url(img/Sustentabilidadlogo.jpg);
+      background-size: 90%;
+
+      background-repeat: no-repeat;
+      -webkit-transition: all .5s ease-in-out;
+      -moz-transition: all .5s ease-in-out;
+      -o-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+
+    }
+
+    header:hover {
+      background: url(img/Sustentabilidadlogo2.jpg);
+      background-repeat: no-repeat;
+      background-size: 90%;
+      background-position: center;
+
+      transform: translate(-320px, 0);
+      -webkit-transform: translate(-320px, 0);
+      /** Safari & Chrome **/
+      -o-transform: translate(-320px, 0);
+      /** Opera **/
+      -moz-transform: translate(-320px, 0);
+      /** Firefox **/
+    }
+
+
+
+
+
+    nav {
+      margin: 20px auto;
+      max-width: 1000px;
+      width: 90%;
+
+    }
+
+    /* COlores aleatorios en menu */
+
+    nav ul li a:hover {
+      animation: color 3s;
+      animation-iteration-count: infinite;
+      transform: scale(1.2, 1.2);
+      box-shadow: 4px 3px 7px #353b48;
+
+    }
+
+
+    @keyframes color {
+      0% {
+        background: #ff7f50;
+      }
+      25% {
+        background: #ff6348;
+      }
+      50% {
+        background: #2ed573;
+      }
+      75% {
+        background: #7bed9f;
+      }
+      100% {
+        background: transparent;
+      }
+    }
+
+    /* termina colores aleatorios del menu */
+
+    /* Fuentes personalizadas */
+
+    @font-face {
+      font-family: fuente;
+      src: url(font/fuente.otf);
+    }
+
+
+
+    @font-face {
+      font-family: mac;
+      src: url(font/escritura.ttf);
+    }
+
+    @font-face {
+      font-family: tema;
+      src: url(font/tema.ttf);
+    }
+
+    /* Termina fuentes personalizadas */
+
+    li {
+      font-family: fuente;
+      font-size: 25px;
+    }
+
+
+    .seccion {
+      font-family: tema;
+      font-size: 16px;
+    }
+
+
+    .frase {
+      font-family: mac;
+      font-size: 30px;
+      text-shadow: 3px 3px 7px #4FED5E;
+    }
+
+    /* Imagen de escala a grises */
+
+    .imagen:hover {
+      filter: saturate(300%);
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+    }
+
+
+    /* Menu desplegable jquery */
+
+    .menu-fixed {
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      max-width: 94.5%;
+      width: 94.5%;
+      -webkit-transition: all .5s ease-in-out;
+      -moz-transition: all .5s ease-in-out;
+      -o-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+
+    }
+
+    /* Estilos de Menu */
+
+    nav ul {
+      list-style: none;
+
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+
+    }
+
+
+    nav ul {
+      display: table;
+      /*overflow:hidden;*/
+      width: 100%;
+      background: url(img/menu7.jpg);
+      position: relative;
+      box-shadow: 4px 4px 5px black;
+
+
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+    }
+
+
+    nav ul li {
+      display: table-cell;
+
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+
+    }
+
+    /* Submenu */
+
+    nav ul li:hover ul {
+      display: block;
+      height: 100%;
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+    }
+
+    nav ul li ul {
+      display: block;
+      position: absolute;
+      background: #353b48;
+      left: 0;
+      right: 0;
+      overflow: hidden;
+      height: 0%;
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+    }
+
+
+
+
+    nav ul li ul {
+      display: none;
+
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+    }
+
+    nav ul li a {
+      color: #fff;
+      display: block;
+      line-height: 20px;
+      padding: 20px;
+      position: relative;
+      text-align: center;
+      text-decoration: none;
+      -webkit-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -moz-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -o-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      -ms-transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+      transition: all 3s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+
+    }
+
+    /* Imagenes */
+
+    .imagen {
+      background-attachment: fixed;
+
+    }
+
+
+
+
+
+    .active {
+      background: #037E8C;
+      font-weight: bold;
+    }
+
+    .acerca {
+      position: fixed;
+      bottom: 0px;
+      right: 0px;
+      background: #cc8e35;
+      height: 70px;
+      width: 195px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: fuente;
+      font-size: 28px;
+      box-shadow: 3px 3px 5px black;
+
+      cursor: pointer;
+      border-radius: 20px;
+
+    }
+
+    .acerca:hover {
+      background: #ffb142;
+      -webkit-transition: all .5s ease-in-out;
+      -moz-transition: all .5s ease-in-out;
+      -o-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+    }
+
+    .contenido {
+      display: flex;
+      background: transparent;
+    }
+
+    h1 {
+      color: black;
+      font-size: 40px;
+
+    }
+
+
+
+    h2 {
+      color: black;
+      font-size: 40px;
+    }
+
+    div .s {
+      width: 100%;
+      /*height: 450px;*/
+      background: white;
+      font-size: 30px;
+      color: black;
+      text-align: justify;
+
+    }
+
+    div .c2 {
+      width: 100%;
+      /*height: 450px;*/
+      background: transparent;
+      font-size: 30px;
+      color: black;
+      text-align: justify;
+
+
+
+    }
+
+    .i1 {
+      background: url(img/sustentable.png);
+      background-repeat: no-repeat;
+      width: 70%;
+
+    }
+
+    .i2 {
+      background: url(img/s6.png);
+      background-repeat: no-repeat;
+      width: 70%;
+
+    }
+
+    .c1 {
+      background: transparent;
+      display: flex;
+    }
+
+    body::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    body::-webkit-scrollbar-thumb {
+      background: #27ae60;
+      border-radius: 5px;
+    }
+
+    body::-webkit-scrollbar-track {
+      background: #353b48;
+    }
+
+    body::-webkit-scrollbar-thumb:hover {
+      background: #2ecc71;
+    }
+  </style>
+
+</head>
+
+<!--Menu principal en html -->
+
+<body>
+
+  <span class="acerca">
+    <a href="AcercadeNosotros.html">Acerca de Nosotros</a>
+  </span>
+
+  <div class="contenedor">
+    <header></header>
+    <nav class="menu">
+      <ul>
+
+
+        <li>
+          <a href="index.html">
+            <span></span>Inicio</a>
+        </li>
+
+        <li>
+          <a href="Ecosistema.html">
+            <span></span>Ecosistema</a>
+
+          <ul>
+
+            <li>
+              <a href="Ecosistema-Acuatico.html">
+                <span></span>Ecosistema Acuatico</a>
+            </li>
+
+            <li>
+              <a href="Ecosistema-Terrestre.html">
+                <span></span>Ecosistema Terrestre</a>
+            </li>
+
+            <li>
+              <a href="Ecosistema_Fragmentado.html">
+                <span></span>Ecosistema Fragmentado</a>
+            </li>
+          </ul>
+
+
+        </li>
+
+        <li>
+          <a href="Biodiversidad.html">
+            <span></span>Biodiversidad</a>
+
+          <ul>
+            <li>
+              <a href="Biodiversidad_Genetica.html">
+                <span></span>Diversidad genetica</a>
+            </li>
+
+            <li>
+              <a href="Biodiversidad_Organica.html">
+                <span></span>Diversidad Organísmica</a>
+            </li>
+
+          </ul>
+
+
+
+
+        </li>
+
+        <li>
+          <a class="active" href="sustentabilidad.html">
+            <span></span>Sustentabilidad</a>
+
+
+          <ul>
+
+            <li>
+              <a href="sustentabilidad_Economica.html">
+                <span></span>Sustentabilidad Economica</a>
+            </li>
+
+
+            <li>
+              <a href="sustentabilidad_Social.html">
+                <span></span>Sustentabilidad Social</a>
+            </li>
+          </ul>
+
+
+
+        </li>
+
+        <li>
+          <a href="Factores_Ambientales.html">
+            <span></span>Factores ambientales</a>
+
+          <ul>
+
+            <li>
+              <a href="factoes_bioticos.html">
+                <span></span>Factores Bioticos</a>
+            </li>
+
+            <li>
+              <a href="factores_abioticos.html">
+                <span></span>Factores Abioticos</a>
+            </li>
+
+          </ul>
+        </li>
+
+
+
+
+      </ul>
+    </nav>
+    <div>
+      <h2 align="center" class="frase">En la naturaleza está la preservación del mundo</h2>
+
+      <h2 align="center" class="frase">Henry David Thoreau, escritor, poeta y filósofo, agrimensor y naturalista estadounidense, autor de Walden. </h2>
+
+      <img class="imagen" src="img/menu2.jpg" width="100%" height="100%">
+
+    </div>
+
+    <h1 class="frase">Sustentabilidad</h1>
+
+    <div class="contenido">
+      <div class="s">Como sustentabilidad definimos la cualidad de sustentable. Como tal, en áreas como la economía y la ecología, sustentable
+        es algo que se puede sostener a lo largo del tiempo sin agotar sus recursos o perjudicar el medio ambiente. En este
+        sentido, la sustentabilidad es la capacidad que tiene una sociedad para hacer un uso consciente y responsable de
+        sus recursos, sin agotarlos o exceder su capacidad de renovación, y sin comprometer el acceso a estos por parte de
+        las generaciones futuras. Sustentabilidad sería, pues, producir bienes y servicios a partir nuestros recursos (naturales,
+        energéticos, económicos), a un ritmo en el cual no los agotemos y en el cual no produzcamos más contaminantes de
+        aquellos que puede absorber el medio ambiente sin ser perjudicado.</br>
+      </div>
+
+      <div class="i1"></div>
+    </div>
+
+    <h2 class="frase">¿Sustentabilidad o sostenibilidad?</h2>
+    <div class="c1">
+      <div class="c2">
+        Una duda común es preguntarse si el término correcto es sustentabilidad o sostenibilidad. Si bien en el Diccionario de la
+        Real Academia Española solo aparece la palabra sostenibilidad, que refiere la cualidad de sostenible, el vocablo
+        sustentabilidad ha venido ganando, con el paso del tiempo, mayor arraigo entre los hispanohablantes de Latinoamérica.
+        De modo que, siendo que ambas significan, en esencia, lo mismo, ambos usos son correctos. Pero sostenibilidad es
+        más usual en España y sustentabilidad lo es en Latinoamérica.
+      </div>
+
+      <div class="i2"></div>
+    </div>
+
+    <div align="center">
+      <video src="videos/sustentabilidad.mp4" autobuffer autoloop loop controls poster="/images/video.png" width="100%"></video>
+    </div>
+
+  </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Popins", sans-serif;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: url(../IMG/bg.jpg)no-repeat;
+    animation: color 15s;
+    animation-iteration-count: infinite;
+    background-size: cover;
+    background-position: center;
+}
+
+@keyframes color {
+    5% {
+        filter: hue-rotate(20deg);
+    }
+    25% {
+        filter: hue-rotate(40deg);
+    }
+    35% {
+        filter: hue-rotate(80deg);
+    }
+    50% {
+        filter: hue-rotate(120deg);
+    }
+    75% {
+        filter: hue-rotate(180deg);
+    }
+    90% {
+        filter: hue-rotate(240deg);
+    }
+    100% {
+        filter: hue-rotate(300deg);
+    }
+}
+
+header {
+    position: relative;
+    top: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    position: relative;
+    color: #000;
+    font-size: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+header .navegacion a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 7px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+    transition-property: background;
+}
+
+header .navegacion a:not(:last-child) {
+    margin-right: 30px;
+}
+
+header .navegacion a:hover {
+    background: #fff;
+}
+
+.contenido {
+    max-width: 650px;
+    margin: 60px 100px;
+}
+
+.contenido .info h2 {
+    color: #226A80;
+    font-size: 75px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 60px;
+    margin-bottom: 30px;
+}
+
+.contenido .info h2 span {
+    color: #fff;
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.contenido .info p {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    text-align: justify;
+}
+
+.contenido .info-btn {
+    color: #fff;
+    background: #226A80;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+    border-radius: 18px;
+    transition: 0.3s;
+    transition-property: background;
+}
+
+.contenido .info-btn:hover {
+    background: #0C4F60;
+}
+
+.media-iconos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.media-iconos a {
+    position: relative;
+    color: #111;
+    font-size: 40px;
+    transition: 0.3s;
+    transition-property: transform;
+}
+
+.media-iconos a:not(:last-child) {
+    margin-right: 60px;
+}
+
+.media-iconos a:hover {
+    transform: scale(1.5);
+}
+
+label {
+    display: none;
+}
+
+#check {
+    z-index: 3;
+    display: none;
+}
+
+@media (max-width: 960px) {
+    header .navegacion {
+        display: none;
+    }
+    label {
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+        transition: 0.3s;
+        transition-property: color;
+    }
+    label:hover {
+        color: #fff;
+    }
+    label .close-btn {
+        display: none;
+    }
+    #check:checked~header .navegacion {
+        z-index: 2;
+        position: fixed;
+        background: rgba(144, 223, 255, 0.9);
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #check:checked~header .navegacion a {
+        font-weight: 700;
+        margin-right: 0;
+        margin-bottom: 50px;
+        letter-spacing: 2px;
+    }
+    #check:checked~header label .menu-btn {
+        display: none;
+    }
+    #check:checked~header label .close-btn {
+        z-index: 2;
+        display: block;
+        position: fixed;
+    }
+    label .menu-btn {
+        position: absolute;
+    }
+    header .logo {
+        position: absolute;
+        bottom: -6px;
+    }
+    .contenido .info h2 {
+        font-size: 45px;
+        line-height: 50px;
+    }
+    .contenido .info h2 span {
+        font-size: 40px;
+        font-weight: 400;
+    }
+    .contenido .info p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width:560px) {
+    .contenido .info h2 {
+        font-size: 35px;
+        line-height: 40px;
+    }
+    .contenido .info h2 span {
+        font-size: 30px;
+        font-weight: 400;
+    }
+    .contenido .info p {
+        font-size: 17px;
+    }
+}
